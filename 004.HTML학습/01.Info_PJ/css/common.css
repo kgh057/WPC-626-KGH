@@ -13,7 +13,7 @@ CDN(Content Delivery Network
  /* 전체 글씨체 적용하기 */
  body{
   /* 웹폰트체를 전체에 적용함! */
-  font-family: "Jua", sans-serif;
+  font-family: "Nanum Gothic", sans-serif; 
  }
  
 /* 기본값 초기화 - 마진, 패딩 0 */
