@@ -189,6 +189,7 @@ text-shadow: 2px 2px 2px #00000022;
 
 /* 3.하단 영역 */
 .bottom-area {
+  font-family: "Jua", sans-serif;
   /* 블록내부 인라인 중앙정렬 */
   text-align: center;
   /* 배경색 bgc */
