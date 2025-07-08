@@ -3,7 +3,19 @@
 
 /* 공통 외부 CSS 불러오기 */
 /* @import url(경로/파일명); */
+
+/* 초기화CSS */
+@import url(./reset.css);
+
+/* 상단,하단 공통모듈 */
 @import url(./common.css);
+
+/* 공통설정 */
+/* .main-area 직계자식(>) 모두 선택
+별(*)은 모든것들 선택하는 문자열 */
+.main-area > * {
+  margin-bottom: 20px;
+}
 
 /* 2-1. 서브타이틀 */
 .sub-title {
@@ -34,7 +46,7 @@
   /* 글자테두리 webtst
     -> 테두리 두게를 더 얇게 하려면
     px단위 숫자를 소수점 아래로 쓰면됨 */
-  -webkit-text-stroke: .1px black;
+  -webkit-text-stroke: 0.1px black;
   /* 접두어란?
     속성 앞에 -webkit- 라고 쓰면
     크롬, 사파리 브라우저용 속성임
@@ -53,12 +65,12 @@
 }
 /* (2) 사회페이지 */
 .social {
-  color: #ffffff;
+  color: #9bfcff;
   background-image: url(../images/titbg3.jpg);
 }
 /* (3) IT/과학페이지 */
 .it {
-  color: #9be6ff;
+  color: #ffffff;
   background-image: url(../images/titbg4.jpg);
 }
 /* (4) TV/연예페이지 */
@@ -68,8 +80,27 @@
 }
 
 /* 2-2. 언론사로고 */
+.press-logo img {
+  height: 32px;
+}
 /* 2-3. 기사제목 */
+.article-title {
+  font-size: 33px;
+}
 /* 2-4. 기사사진 */
+.article-picture img {
+  width: 100%;
+}
+/* 이미지설명 */
+.article-picture figcaption{
+    /* 박스설정 */
+    margin-bottom: 20px;
+    text-align: center;
+
+    /* 글자설정 */
+    font-size: 15px;
+    color: #666;
+}
 /* 2-5. 기사내용 */
 /* 2-6. 기자정보 */
 /* 2-7. 기사원문 */
