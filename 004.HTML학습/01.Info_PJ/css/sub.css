@@ -5,28 +5,71 @@
 /* @import url(경로/파일명); */
 @import url(./common.css);
 
-
 /* 2-1. 서브타이틀 */
-.sub-title{
-    /* (1)박스디자인 */
-    /* 패딩 p40 */
-    padding: 40px;
-    /* 글자중앙 tac */
-    text-align: center;
-    /* 테두리 bd */
-    border: 2px solid #254791;
-    /* 둥근모서리 bdrs20 */
-    border-radius: 20px;
-    /* 배경넣기 bg -> 색이반고윙/크 */
-    background: url(../images/titbg4.jpg) no-repeat 0/cover;
-    
-    /* (2)글자디자인 */
-    /* 글자크기 fz30 */
-    font-size: 30px;
+.sub-title {
+  /* (1)박스디자인 */
+  /* 패딩 p40 */
+  padding: 40px;
+  /* 글자중앙 tac */
+  text-align: center;
+  /* 테두리 bd */
+  border: 2px solid #254791;
+  /* 둥근모서리 bdrs20 */
+  border-radius: 20px;
+
+  /* 배경공통 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* 배경넣기 bg -> 색이반고윙/크 */
+  /* background: url(../images/titbg4.jpg) no-repeat 0/cover; */
+
+  /* (2)글자디자인 */
+  /* 글자체 ff */
+  font-family: "Jua", sans-serif;
+  /* 글자크기 fz40 */
+  font-size: 40px;
+
+  /* 글자테두리 webtst
+    -> 테두리 두게를 더 얇게 하려면
+    px단위 숫자를 소수점 아래로 쓰면됨 */
+  -webkit-text-stroke: .1px black;
+  /* 접두어란?
+    속성 앞에 -webkit- 라고 쓰면
+    크롬, 사파리 브라우저용 속성임
+    -ms- 마이크로소프트
+    -o- 오페라 브라우저
+    -moz- 파이어폭스
+    이 속성은 이미 공식적으로는 아니지만
+    다른 최신 브라우저에서 사용됨!
+     */
 }
+/* 각 서브별 타이틀 셋팅 변경하기 */
+/* (1) 경제페이지*/
+.economics {
+  color: #ffffff;
+  background-image: url(../images/titbg2.jpg);
+}
+/* (2) 사회페이지 */
+.social {
+  color: #ffffff;
+  background-image: url(../images/titbg3.jpg);
+}
+/* (3) IT/과학페이지 */
+.it {
+  color: #9be6ff;
+  background-image: url(../images/titbg4.jpg);
+}
+/* (4) TV/연예페이지 */
+.tv {
+  color: #9bfcff;
+  background-image: url(../images/titbg5.jpg);
+}
+
 /* 2-2. 언론사로고 */
 /* 2-3. 기사제목 */
-/* 2-4. 기사사진  */
+/* 2-4. 기사사진 */
 /* 2-5. 기사내용 */
 /* 2-6. 기자정보 */
 /* 2-7. 기사원문 */
