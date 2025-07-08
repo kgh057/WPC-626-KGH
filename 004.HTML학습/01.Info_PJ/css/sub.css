@@ -87,47 +87,93 @@
 .article-title {
   font-size: 33px;
 }
+
+/* 스페셜박스(추가정보박스) */
+.special-box {
+  font-size: 18px;
+}
+/* 스페셜 제목 */
+.special-box h4 {
+  /* 왼쪽 보더 bl */
+  border-left: 3px solid #000;
+  /* 왼쪽패딩 pl */
+  padding-left: 20px;
+  /* 아랫쪽 간격 mb */
+  margin-bottom: 40px;
+}
+/* 스페셜 내용 */
+.special-box p {
+  line-height: 1.7;
+}
+
 /* 2-4. 기사사진 */
 .article-picture img {
   width: 100%;
 }
 /* 이미지설명 */
-.article-picture figcaption{
-    /* 박스설정 */
-    margin-bottom: 20px;
-    text-align: center;
+.article-picture figcaption {
+  /* 박스설정 */
+  /* 마진 위아래 20px 양쪽 0 */
+  margin: 20px 0;
+  text-align: center;
 
-    /* 글자설정 */
-    font-size: 15px;
-    color: #666;
+  /* 글자설정 */
+  font-size: 15px;
+  color: #666;
 }
 /* 2-5. 기사내용 */
-.contents p{
+.contents p {
   /* 글자설정 */
   font-size: 18px;
   /* 줄간격 lh - 숫자값은 글자크기에 대한 배수임! */
   line-height: 1.7;
 }
 /* 2-6. 기자정보 */
-.reporter{
+.reporter {
   font-size: 16px;
   color: #333;
 }
 /* 2-7. 기사원문 */
-.article-link{
+.article-link {
   /* 인라인 오른쪽 정렬 */
   text-align: right;
 }
 /* 버튼 a요소 */
-.article-link a{
+.article-link a {
   /* 디자인 적용 및 부모박스의 문자열
   정렬 적용되도록 인라인블록으로 변경! */
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    border: 2px solid #000;
-    border-radius: 50%;
-    background: #d5f4ff;
-    text-align: center;
-    line-height: 100px;
+  display: inline-block;
+
+  /* (1) 박스설정 */
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background: #fffbeb;
+  text-align: center;
+  line-height: 100px;
+
+  /* (2) 글자설정 */
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  color: #000;
+}
+
+/* 버튼 a 마우스 오버시
+-> 가상클래스 오버시 :hover사용! */
+.article-link a:hover {
+  /* 배경색 */
+  background-color: #9be6ff;
+  /* 박스그림자 bxsh
+  box-shadow: 
+  inset(내부그림자) x축 y축 블러 그림자색;
+  -> 글자그림자에는 없는 "확장"(spread)가 있음
+  즉, 그림자를 크게 만들 수 있음!
+  그리고 콤마로 설정을 연결하면 여러개의 그림자 사용가능!
+   */
+  box-shadow: 
+  /* 내부그림자 */
+  inset 0 0 5px 5px #508ea2,
+  /* 외부그림자 */
+  5px 5px 3px #00000093;
 }
