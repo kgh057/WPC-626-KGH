@@ -90,9 +90,13 @@
       <!-- 2-5. 기사내용 -->
       <section class="contents">
         <p>
-          <b>독일 막스플랑크 동물행동 연구소(<abbr title="Max Planck Institute of Animal Behavior">MPI-AB</abbr>)</b>와 콘스탄츠대 연구팀은
-          26일 과학 저널 커런트 바이올로지(Current Biology)에서 수마트라
-          남아체주
+          <b
+            >독일 막스플랑크 동물행동 연구소(<abbr
+              title="Max Planck Institute of Animal Behavior"
+              >MPI-AB</abbr
+            >)</b
+          >와 콘스탄츠대 연구팀은 26일 과학 저널 커런트 바이올로지(Current
+          Biology)에서 수마트라 남아체주
           <!-- strong 요소 : "중요하다"라는 의미! -->
           <strong>
             오랑우탄(Pongo abelii) 53마리의 수면 행동을 14년간 관찰, 이런 사실을
@@ -238,7 +242,9 @@
      
     -->
       <!-- 2-6. 기자정보 -->
-      <div class="reporter">이주영(scitech@yna.co.kr)</div>
+      <div class="reporter">이주영(scitech@yna.co.kr) <br>
+      <bdo dir="rtl">정확하고 신속하게 보도하는 좋은기자임</bdo>
+    </div>
       <!-- 2-7. 기사원문 -->
       <div class="article-link">
         <a
@@ -253,13 +259,25 @@
       </div>
 
       <!-- 2-8. 오늘의 작품&느낌 -->
-       <article class="work">
-      <!-- 제목 -->
-       <h4>오늘의 작품 &amp; 느낌</h4>
-       <!-- 그림박스 -->
-        figure <img src="./images/img_the_scream.jpg" alt="뭉크의 절규">
+      <article class="work">
+        <!-- 제목 -->
+        <h4>오늘의 작품 &amp; 느낌</h4>
+        <!-- 그림박스 -->
+        <figure>
+          <img src="./images/img_the_scream.jpg" alt="뭉크의 절규" />
+        </figure>
         <!-- 이미지 설명 -->
-       </article>
+        <figcaption>
+          뭉크의 &lt;<cite>절규</cite>&gt;
+        </figcaption>
+      </article>
+      <!--
+      [ HTML 태그 내부에서 특수문자처리 ]
+      &나 <> 태그에 사용하는 기호 등은 특수문자인데 아래와 같이 처리함
+      & 는 &amp; (amp는 엠퍼센드)
+      < 는 &lt; (lt는 less than ~보다작은)
+      > 는 &gt; (gt는 greater than ~보다큰)
+      -->
     </main>
 
     <!-- 3.*********** 하단영역 ***********-->
