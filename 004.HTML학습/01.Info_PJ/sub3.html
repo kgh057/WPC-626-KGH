@@ -242,9 +242,10 @@
      
     -->
       <!-- 2-6. 기자정보 -->
-      <div class="reporter">이주영(scitech@yna.co.kr) <br>
-      <bdo dir="rtl">정확하고 신속하게 보도하는 좋은기자임</bdo>
-    </div>
+      <div class="reporter">
+        이주영(scitech@yna.co.kr) <br />
+        <bdo dir="rtl">정확하고 신속하게 보도하는 좋은기자임</bdo>
+      </div>
       <!-- 2-7. 기사원문 -->
       <div class="article-link">
         <a
@@ -267,9 +268,7 @@
           <img src="./images/img_the_scream.jpg" alt="뭉크의 절규" />
         </figure>
         <!-- 이미지 설명 -->
-        <figcaption>
-          뭉크의 &lt;<cite>절규</cite>&gt;
-        </figcaption>
+        <figcaption>뭉크의 &lt;<cite>절규</cite>&gt;</figcaption>
       </article>
       <!--
       [ HTML 태그 내부에서 특수문자처리 ]
@@ -280,38 +279,137 @@
       -->
 
       <!-- 테크뉴스 : ul사용! -->
-       <article class="tech-news news-box">
-
+      <article class="tech-news news-box">
         <!-- 제목 -->
-         <h3>테크뉴스</h3>
-         <!-- ul li는 반드시 같이 사용해야함!
+        <h3>테크뉴스</h3>
+        <!-- ul li는 반드시 같이 사용해야함!
           ul은 순서없는 리스트임(unordered list) -->
-         <ul>
+        <ul>
           <li>
-            <a href="https://n.news.naver.com/mnews/hotissue/article/001/0015473464?type=series&cid=1087298" target="_blank">
+            <a
+              href="https://n.news.naver.com/mnews/hotissue/article/001/0015473464?type=series&cid=1087298"
+              target="_blank"
+            >
               "깊은 수면, '유레카 순간'으로 이어질 가능성 높다"
             </a>
           </li>
           <li>
-            <a href="https://n.news.naver.com/mnews/hotissue/article/001/0015470559?type=series&cid=1087298" target="_blank">
+            <a
+              href="https://n.news.naver.com/mnews/hotissue/article/001/0015470559?type=series&cid=1087298"
+              target="_blank"
+            >
               제임스웹, 110광년 밖 원시행성원반서 준목성급 외계행성 포착
             </a>
           </li>
-         </ul>
-       </article>
+        </ul>
+      </article>
 
-       <!-- 랭킹뉴스 : ol 사용 -->
-        <article class="rank-news news-box">
-          <!-- 제목 -->
-           <h3>랭킹뉴스</h3>
-           <!-- ol li는 반드시 같이 사용해야함!
+      <!-- 랭킹뉴스 : ol 사용 -->
+      <article class="rank-news news-box">
+        <!-- 제목 -->
+        <h3>랭킹뉴스</h3>
+        <!-- ol li는 반드시 같이 사용해야함!
             ol 순서있는 리스트임(orderde list) -->
-            <ol>
-              <li><a href="https://n.news.naver.com/mnews/article/215/0001216034" target="_blank">삼성전자, '갤럭시 Z 스튜디오' 더현대 서울서 오픈</a></li>
-              <li><a href="https://n.news.naver.com/mnews/article/029/0002967943" target="_blank">“차세대 숏폼 작가 모여라”…KT스튜디오지니, 극본 공모전 개최</a></li>
-              <li><a href="https://n.news.naver.com/mnews/article/082/0001335275" target="_blank">위약금 면제 종료 SKT, 해킹 수습 비용 얼마나 들었을까</a></li>
-            </ol>
-        </article>
+        <ol>
+          <li>
+            <a
+              href="https://n.news.naver.com/mnews/article/215/0001216034"
+              target="_blank"
+              >삼성전자, '갤럭시 Z 스튜디오' 더현대 서울서 오픈</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://n.news.naver.com/mnews/article/029/0002967943"
+              target="_blank"
+              >“차세대 숏폼 작가 모여라”…KT스튜디오지니, 극본 공모전 개최</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://n.news.naver.com/mnews/article/082/0001335275"
+              target="_blank"
+              >위약금 면제 종료 SKT, 해킹 수습 비용 얼마나 들었을까</a
+            >
+          </li>
+        </ol>
+      </article>
+      <!-- 분야별 뉴스 : dl > dt,dd -->
+      <article class="sec-news news-box">
+        <!-- 제목 -->
+        <h3>분야별 뉴스</h3>
+        <!-- dl은 반드시 dt,dd가 나와야함! -->
+        <dl>
+          <!-- 경제파트 -->
+          <dt>경제</dt>
+          <dd>
+            <a
+              href="https://n.news.naver.com/mnews/article/654/0000131227"
+              target="_blank"
+              >억대 수익에도 세금은 나몰라라…유튜버 21명에 89억 부과</a
+            >
+          </dd>
+          <dd>
+            <a
+              href="https://n.news.naver.com/mnews/article/018/0006065210"
+              target="_blank"
+            >
+              전기·보험료 등 50만원 지원…‘소상공인 부담경감 크레딧’ 개시</a
+            >
+          </dd>
+          <!-- 사회파트 -->
+          <dt>사회</dt>
+          <dd>
+            <a
+              href="https://n.news.naver.com/mnews/article/437/0000448452"
+              target="_blank"
+            >
+              윤 전 대통령, 내란 특검 소환 또 '불응'…강제구인 가능성</a
+            >
+          </dd>
+          <dd>
+            <a
+              href="https://n.news.naver.com/mnews/article/055/0001274903"
+              target="_blank"
+            >
+              [단독] 내란특검, '무인기 침투' 드론부대·국가안보실 등 압수수색</a
+            >
+          </dd>
+          <!-- TV/연예파트 -->
+          <dt>TV/연예파트</dt>
+          <dd>
+            <a
+              href="https://m.entertain.naver.com/home/article/108/0003347139"
+              target="_blank"
+              >'문원♥' 신지 "나 때문에 코요태 멤버들 미움 받을까 봐
+              걱정"..'유퀴즈'서 속앓이 공개[스타이슈]</a
+            >
+          </dd>
+          <dd>
+            <a
+              href="https://m.entertain.naver.com/home/article/108/0003347156"
+              target="_blank"
+              >김준호♥김지민, 하객 1200명에 안심 스테이크+갈비탕 대접
+              [스타이슈]</a
+            >
+          </dd>
+        </dl>
+      </article>
+
+      <!--
+         [용어정의 리스트 : dl > dt + dd]
+         dl : 용어리스트
+         (defines the description list)
+         dt : 용어
+         (defines the term)
+         dd : 용어설명
+         (description each term)
+         __________________________
+         
+         주의 - dl은 반드시 자식요소로 dt와 dd가
+         한번이상 사용되야 함!!!
+         또 주의 - dt와 dd는 형제관계임!(부모자식아님!)
+         -->
     </main>
 
     <!-- 3.*********** 하단영역 ***********-->
