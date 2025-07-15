@@ -195,3 +195,20 @@
   /* 내부그림자 */ inset 0 0 5px 5px #508ea2,
     /* 외부그림자 */ 5px 5px 3px #00000093;
 }
+/* 뉴스 공통 박스 디자인 */
+.news-box {
+  border-top: 2px dashed #ccc;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* 뉴스 공통 제목 디자인 */
+.news-box h3 {
+  display: inline-block;
+  font-size: 25px;
+  padding: 15px;
+  border: 2px solid gray;
+  border-radius: 20px;
+  background-color: #ededed;
+  margin-bottom: 17px;
+}
