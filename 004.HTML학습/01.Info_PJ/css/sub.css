@@ -195,15 +195,46 @@
   /* 내부그림자 */ inset 0 0 5px 5px #508ea2,
     /* 외부그림자 */ 5px 5px 3px #00000093;
 }
-/* 뉴스 공통 박스 디자인 */
+
+/* 기사 공통 박스 디자인 */
 .news-box {
   border-top: 2px dashed #ccc;
   padding: 20px;
   margin-top: 50px;
 }
 
-/* 뉴스 공통 제목 디자인 */
+/* 기사 공통 제목 디자인 */
 .news-box h3 {
+  display: inline-block;
+  font-size: 25px;
+  padding: 15px;
+  border: 2px solid gray;
+  border-radius: 20px;
+  background-color: #ededed;
+  margin-bottom: 17px;
+}
+
+/* 기사 설명 공통 내용박스 디자인
+공통이지만 인용블록은 blockquote이고
+주해는 p요소를 쓰고 있으므로 공통은
+.desc-box h4 + * 
+설명: h4요소 다음 형제(+)요소 선택인데
+별(*)을 사용하여 어떤 타입이든 모두 선택함!
+ */
+ .desc-box h4 + * {
+  font-size: 18px;
+  line-height: 1.7;
+ }
+
+/* 뉴스 설명 공통 박스 디자인 */
+.desc-box {
+  border-top: 2px dashed #ccc;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* 뉴스 설명 공통 제목 디자인 */
+.desc-box h4 {
   display: inline-block;
   font-size: 25px;
   padding: 15px;
