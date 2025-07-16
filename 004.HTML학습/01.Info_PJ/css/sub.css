@@ -212,7 +212,7 @@
   font-size: 25px;
   padding: 15px;
   /* border: 2px solid gray; */
-  /* border-radius: 20px; */
+  border-radius: 20px;
   /* background-color: #ededed; */
   margin-bottom: 17px;
   background-image: linear-gradient(to left, #fffbeb, #9bfcff);
@@ -260,7 +260,7 @@
   font-size: 25px;
   padding: 15px;
   /* border: 2px solid gray; */
-  /* border-radius: 20px; */
+  border-radius: 20px;
   /* background-color: #ededed; */
   margin-bottom: 17px;
   /* 배경 그라데이션 */
