@@ -271,6 +271,16 @@
 
 /* 뉴스 공통 a링크 */
 .news-box a {
+  /* 말줄임표시 세팅하기 */
+  /*  1. 넘치는 자식요소 숨기기 */
+  overflow: hidden;
+  /* 2. 넘치는 텍스트 말줄임표시 나오게하기 */
+  text-overflow: ellipsis;
+  /* 3. 줄바꿈 방지 */
+  white-space: nowrap;
+  /* 4. 말줄임 해당박스는 블록요소로 변경 */
+  display: block;
+
   font-size: 18px;
   line-height: 38px;
 }
@@ -287,10 +297,10 @@
 뒤에 넣기 ::after
 -> 필수 속성 ->>> content */
 .tech-news a::before {
-content: '💤';
+  content: "💤";
 }
 .tech-news a::after {
-  content: '💭';
+  content: "💭";
 }
 
 /* 테크뉴스 a요소 기본 색 변경하기
@@ -315,7 +325,7 @@ n번째 자식 -> 선택요소:nth-child (순번숫자)
 }
 
 /* 랭킹뉴스 박스 */
-.rank-news ol{
+.rank-news ol {
   /* 리스트 스타일 숫자형으로 다시 사용
   ol요소의 기본auto 스타일은 decimal 즉, 숫자형 */
   list-style: auto;
@@ -324,15 +334,23 @@ n번째 자식 -> 선택요소:nth-child (순번숫자)
 }
 
 /* 분야별 뉴스 박스 */
+/* dl - dt와 dd의 부모박스 */
+.sec-news dl {
+  /* 넘치는 자식요소 숨기기
+  -> 부가적으로 자식의 float 설정이 바깥요소로 나가는 것을 차단한다! */
+  overflow: hidden;
+}
 /* dt - 분류타이틀 */
-.sec-news dt{
+.sec-news dt {
   /* 박스설정 */
-  display: block;
-  width: 127px;
+  /* display: block; -> dt는 원래 block임! */
+  width: 115px;
   /* 가로크기를 안주고 자동으로 내용만큼
   박스크기를 잡으려고 diplay를 inline-block으로 했었으나
   가로 크기를 정할 경우 block으로 해도 무방하다! */
-  margin: 25px 0 10px;
+
+  /* 마진 순서: 위 오른 아래 왼 */
+  margin: 25px 10px 10px 0;
   padding: 20px;
   border: 3px dashed #000;
   /* 원형보더는 값이 50%임! (bdrs50p) */
@@ -341,10 +359,49 @@ n번째 자식 -> 선택요소:nth-child (순번숫자)
   background-color: #f0f0f0;
   /* 타이틀 글자 랩핑방지(글자줄바꿈방지) */
   white-space: nowrap;
-  
+
+  /* dt박스 옆으로 dd가 올라오도록
+  나는 왼쪽(left) 너는 오른쪽으로 올라와!
+  흘러가는 속성 float:left */
+  float: left;
+  /* 다른 블록요소에 영향을 주므로
+  부모박스인 dl에 overflow:hidden으로 이를 차단한다! */
+
   /* 글자설정 */
   font-family: "Jua", sans-serif;
-  font-size: 25px;
+  font-size: 23px;
+}
+
+/* 개별적으로 dt를 선택하여 글자색, 배경색 바꾸기 */
+.sec-news dt:first-of-type{
+  color: #000000;
+}
+.sec-news dl:nth-child(2) dt:first-of-type{
+  color: #000000;
+}
+.sec-news dl:last-child(2) dt:first-of-type{
+  color: #000000;
+}
+/* dd - 용어설명박스
+dd타입 중에 첫번재 선택하기
+
+[ 자식요소가 여러가지 섞인 경우 선택하기 ] 
+ 가상클래스 ...-of-type사용
+ 첫번째 타입 -> 요소:first-of-type
+ 마지막째 타입 -> 요소:last-of-type
+ n번재 타입 -> 요소:nth-of-type(순번)
+ */
+.sec-news dd:first-of-type {
+  /* 첫번째 dd를 마진탑을 밀면
+  아래있는 다른요소도 밀린다! */
+  margin-top: 25px;
+}
+
+/* 가상요소 아이콘넣기 -> 대상요소::before */
+.sec-news dd a::before {
+  /* 필수속성 content -> ct */
+  content: "🤍";
+  /* 윈도우 이모지는 윈도우키+콤마(.) */
 }
 
 /* 오늘의 작품&느낌 */
