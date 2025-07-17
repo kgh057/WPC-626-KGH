@@ -378,10 +378,10 @@ child선택자가 아닌 of type선택자를 써야한다! */
 .sec-news dl:first-of-type dt {
   color: #000000;
 }
-.sec-news dl:nth-of-type(2) dt{
+.sec-news dl:nth-of-type(2) dt {
   color: #000000;
 }
-.sec-news dl:last-of-type dt{
+.sec-news dl:last-of-type dt {
   color: #000000;
 }
 /* dd - 용어설명박스
@@ -409,28 +409,60 @@ dd타입 중에 첫번재 선택하기
 /* 포토뉴스 박스 */
 /* 전체 테이블 */
 .photo-news table {
-    max-width: 500px;
-    margin: 0 auto;
-    border: 2px solid #ccc;
-    border-collapse: collapse;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 2px solid #ccc;
+  border-collapse: collapse;
 }
 
 /* td 비율 설정 */
+/* 첫번째 td */
 .photo-news td:nth-child(1) {
+  /* 가로10%에 조금진한회색배경 글자중앙 글자두껍게 */
   width: 10%;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ccc;
 }
+/* 두번째 td */
 .photo-news td:nth-child(2) {
+  /* 가로60%에 옅은회색배경 양쪽패딩 20px */
   width: 60%;
+  background-color: #efefef;
+  padding: 0 20px;
 }
+/* 세번째 td */
 .photo-news td:nth-child(3) {
+  /* 가로30%에 옅은회색배경 패딩 5px*/
   width: 30%;
+  padding: 5px;
+  background-color: #efefef;
+}
+
+/* 두번째 tr의 모든 td에 위, 아래 테두리 넣기
+-> 주의사항 : 디자인은 항상 td에 한다! */
+.photo-news table nr:nth-child(2) td {
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
 }
 
 /* a글자 셋팅변경 */
 .photo-news a {
   /* 공통뉴스 .news-box에서 줄바꿈 방지 셋팅 했었음! */
-  /* 줄바꿈 다시 허용! */
+  /* 줄바꿈 다시 허용! -> 여러줄 처리시 필요! */
   white-space: normal;
+
+  /* 여러줄 처리 말줄임 셋팅하기 : 5가지! */
+  /* 1.웹킷용 박스 디스플레이 */
+  display: -webkit-box;
+  /* 2.넘치는 자식요소 숨기기 */
+  overflow: hidden;
+  /* 3.넘치는 텍스트 말줄임 설정 */
+  text-overflow: ellipsis;
+  /* 4.말줄임 처리 줄수 설정(값 숫자가 처리줄수임 */
+  -webkit-line-clamp: 2;
+  /* 5.말줄임 처리 방향설정(라인진행은 수직방향vertical) */
+  -webkit-box-orient: vertical;
 }
 
 /* 테이블 이미지 */
@@ -439,6 +471,25 @@ dd타입 중에 첫번재 선택하기
   /* 이미지 비율 강제 설정속성
   aspect-ratio 값을 2/1하면 가로:세로 가 2:1임 */
   aspect-ratio: 2/1;
+}
+
+/* 포토뉴스 제목 디자인 재정의! */
+.photo-news h3 {
+/* 배경색제거 글자중앙 최대가로 제거 */
+  background: transparent;
+  text-align: center;
+  max-width: none;}
+
+/* 가상요소 앞에 넣기 */
+.photo-news h3::before {
+    content: "📸";
+    margin-right: 10px;
+}
+
+/* 가상요소 뒤에넣기 */
+.photo-news h3::after {
+    content: "📺";
+    margin-left: 10px;
 }
 
 /* 오늘의 작품&느낌 */
