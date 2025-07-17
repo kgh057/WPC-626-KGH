@@ -372,14 +372,16 @@ n번째 자식 -> 선택요소:nth-child (순번숫자)
   font-size: 23px;
 }
 
-/* 개별적으로 dt를 선택하여 글자색, 배경색 바꾸기 */
-.sec-news dt:first-of-type{
+/* 개별적으로 dt를 선택하여 글자색, 배경색 바꾸기
+-> 이때 dl은 다른 h3형제 요소와 섞여 있으므로
+child선택자가 아닌 of type선택자를 써야한다! */
+.sec-news dl:first-of-type dt {
   color: #000000;
 }
-.sec-news dl:nth-child(2) dt:first-of-type{
+.sec-news dl:nth-of-type(2) dt{
   color: #000000;
 }
-.sec-news dl:last-child(2) dt:first-of-type{
+.sec-news dl:last-of-type dt{
   color: #000000;
 }
 /* dd - 용어설명박스
@@ -402,6 +404,41 @@ dd타입 중에 첫번재 선택하기
   /* 필수속성 content -> ct */
   content: "🤍";
   /* 윈도우 이모지는 윈도우키+콤마(.) */
+}
+
+/* 포토뉴스 박스 */
+/* 전체 테이블 */
+.photo-news table {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-collapse: collapse;
+}
+
+/* td 비율 설정 */
+.photo-news td:nth-child(1) {
+  width: 10%;
+}
+.photo-news td:nth-child(2) {
+  width: 60%;
+}
+.photo-news td:nth-child(3) {
+  width: 30%;
+}
+
+/* a글자 셋팅변경 */
+.photo-news a {
+  /* 공통뉴스 .news-box에서 줄바꿈 방지 셋팅 했었음! */
+  /* 줄바꿈 다시 허용! */
+  white-space: normal;
+}
+
+/* 테이블 이미지 */
+.photo-news img {
+  width: 100%;
+  /* 이미지 비율 강제 설정속성
+  aspect-ratio 값을 2/1하면 가로:세로 가 2:1임 */
+  aspect-ratio: 2/1;
 }
 
 /* 오늘의 작품&느낌 */
