@@ -281,7 +281,7 @@
   /* 4. 말줄임 해당박스는 블록요소로 변경 */
   display: block;
 
-  font-size: 18px;
+  font-size: 15px;
   line-height: 38px;
 }
 /* a 오버시 가상클래스 :hover */
