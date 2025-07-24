@@ -10,3 +10,21 @@
 body{
     background-color: #000;
 }
+
+/* 1. 상단 영역 */
+/* 겉박스 */
+#top-area{
+    background-color: #ffffff;
+}
+
+/* 속박스 */
+.top-area .part-box{
+padding-top: 11px;
+/* 상단영역 높이값 동일셋팅! */
+height: 93px;
+}
+/* 로고이미지 */
+.logo{
+    width: 100%;
+    aspect-ratio: 220 / 71;
+}
