@@ -27,26 +27,21 @@
         /* 블록요소 옆으로 흐르게 
                 - 나는 왼쪽, 너는 오른쪽*/
         height: 100px;
-        /* 높이값이 auto일때 float하면
-                블록요소 중간에 높이값이 더 높은
-                요소가 올경우 다음줄에 내려갈
-                박스가 걸려서 중간부터 나오는 경우가
-                생긴다. 이런 경우 같은 줄에 오는
-                요소에 높이값을 주어서 해결한다! */
+        /* 높이값이 auto일때 float하면 블록요소 중간에 높이값이 더 높은 요소가 올 경우 
+        다음줄에 내려갈 박스가 걸려서 중간부터 나오는 경우가 생긴다. 
+        이런 경우 같은 줄에 오는 요소에 높이값을 주어서 해결한다! */
 
         border: 5px solid #000;
         padding: 15px;
         box-sizing: border-box;
         /* 보더,패딩을 내부로 포함함 
-                - 보더나 패딩때문에 박스가 커지면 안될경우 사용
-                - 33.333% 3등분했는데 커저서 하나가 떨어져 보이므로
-                이를 사용하였다*/
+        - 보더나 패딩때문에 박스가 커지면 안될경우 사용
+        - 33.333% 3등분했는데 커저서 하나가 떨어져 보이므로 이를 사용하였다 */
         text-align: center;
       }
 
       /* 글자관련 클래스 */
-      /* 클래스명은 숫자를 뒤에 쓸 수 있으나
-            숫자로 시작할 수 없다(숫자로 시작하면 적용안됨!) */
+      /* 클래스명은 숫자를 뒤에 쓸 수 있으나 숫자로 시작할 수 없다(숫자로 시작하면 적용안됨!) */
       .fcls1 {
         font-weight: bold;
         color: red;
@@ -76,16 +71,15 @@
         border: 15px dotted red;
       }
       /* 보더관련 클래스 */
-      .bx .bd1 {
-        border: 10px dotted pink !important;
+      .bx .bd2 {
+        border: 5px dashed darkcyan;
       }
       .bx .bd3 {
         border: 20px ridge darkorchid;
       }
-      .bx .bd2 {
-        border: 5px dashed darkcyan;
+      .bx .bd1 {
+        border: 10px dotted pink;
       }
-
       /* 
         [ 클래스 다중적용 가이드 ]
         - 의미 : 클래스는 한 요소에 띄어쓰기로
@@ -116,12 +110,13 @@
   <body>
     <h1>클래스 다중적용</h1>
     <ul class="bx">
-      <li class="">클래스적용1</li>
-      <li class="">클래스적용2</li>
-      <li class="">클래스적용3</li>
-      <li class="">클래스적용4</li>
-      <li class="">클래스적용5</li>
-      <li class="">클래스적용6</li>
+      <li class="fcls1 bd1">클래스적용1</li>
+      <li class="fcls2 bd2">클래스적용2</li>
+      <li class="fcls3 bd3">클래스적용3</li>
+      <li class="fcls1 bd1" id="bd4"
+      style="border: 5px dashed greenyellow;">클래스적용4</li>
+      <li class="fcls2 bd2" style="border: 5px dashed hotpink;">클래스적용5</li>
+      <li class="fcls3 bd3 bd1">클래스적용6</li>
       <li class="">클래스적용7</li>
       <li class="">클래스적용8</li>
       <li class="">클래스적용9</li>
