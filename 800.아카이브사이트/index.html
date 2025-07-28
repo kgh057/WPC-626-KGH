@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>나의 아카이브 사이트</title>
+    <!-- 폰트어썸 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
     <!-- 메인 CSS -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
@@ -13,7 +18,7 @@
       <section class="top-area inbox">
         <!-- 로고파티션 -->
         <div class="part-box col-2">
-            <img class="logo" src="./images/mylogo_11.png" alt="메인로고">
+          <img class="logo" src="./images/mylogo_11.png" alt="메인로고" />
         </div>
         <!-- 메뉴파티션 -->
         <div class="part-box col-8">
@@ -34,12 +39,47 @@
           </ul>
         </div>
         <!-- 깃허브파티션 -->
-        <div class="part-box col-2">깃허브</div>
+        <div class="part-box col-2 git-box">
+          <a
+            class="fa-brands fa-github"
+            href="https://github.com/kgh057/WPC-626-KGH"
+            target="_blank"
+          ></a>
+        </div>
       </section>
     </div>
     <!-- 2. 메인영역 -->
     <div id="main-area">
-      <main class="main-area inbox"></main>
+      <main class="main-area">
+        <!-- 2-1. 자기소개 박스 -->
+        <section id="intro-box">
+          <!-- 자기소개 속박스 -->
+          <div class="intro-box inobx">
+            <!-- 자기소개 글박스 -->
+            <div class="part-box col-4 txt-box">
+              <h2>Kim Geun Hae</h2>
+              <p>
+                안녕하세요! 서울에 거주 중인 웹퍼블리셔입니다. <br />
+                HTML, CSS, JavaScript를 활용한 반응형 웹 구축에 능하며, <br />
+                사용자 경험을 고려한 세련된 UI 구현을 지향합니다.
+                <br /><br />
+                웹 표준과 접근성을 중시하며, <br />
+                디자인과 개발의 연결고리 역할을 즐깁니다.
+                <br />
+                새로운 트렌드에 민감하고, 협업과 소통에 자신 있습니다. <br />
+                더 나은 웹을 위해 늘 배우고 성장하는 퍼블리셔가 되겠습니다.
+              </p>
+            </div>
+            <!-- 자기소개 이미지박스 -->
+            <div class="part-box col-8">
+              <!-- 이미지박스 -->
+              <div class="img-box">
+                <img src="./images/worksbg.jpg" alt="내이미지" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
     <!-- 3. 하단영역 -->
     <div id="bottom-area">
