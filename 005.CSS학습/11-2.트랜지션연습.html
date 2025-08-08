@@ -100,11 +100,26 @@
 
       /* 체크박스 체크시 car-box 이동애니
       -> 체크박스체크시 다음 형제요소들 중 .ani-box의 자식 #car-box 선택 */
-      #chkbx:checked ~ .ani-box #car-box{
-        /* 오른쪽 바깥으로 나감! */
+      #chkbx:checked ~ .ani-box #car-box {
+        /* 1. 오른쪽 바깥으로 나감! */
         left: 100%;
-        /* 트랜지션 trs : 10초간 등속도 */
-        transition: 10s linear;
+        /* 2. 배경이미지 변경 */
+        background-image: url(./images/car2.png);
+
+        /* 트랜지션 trs */
+        transition: 
+        /* 10초간 등속도 */
+        10s linear, 
+        /* 배경이미지 5초 후 변경 */
+        background-image .1s 5s;
+      }
+
+      /* 체크박스 체크시 바트박스 6초 후 투명하게 변경하기 */
+      #chkbx:checked ~ .ani-box #bart-box{
+        /* 투명도 op - opacity: 0~1 사이값 (0투명, 1불투명, 소수점값 반투명) */
+        opacity: 0;
+        /* 트랜지션 trs : 5.5초 후 0.1초간 애니*/
+        transition: 0.1s 5.5s;
       }
     </style>
   </head>
