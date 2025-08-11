@@ -150,16 +150,55 @@
       }
 
       /* 3. transform : translateX(거리) - X축이동
-      - 단위 : px, % 등
-      - 현재 위치로부터 이동
-      - 기준점은 요소의 왼쪽
-      - % 단위를 쓸경우 기준은 요소의 width값
-      - 이동방향: + 오른쪽, -는 왼쪽 */
+       - 단위 : px, % 등
+       - 현재 위치로부터 이동
+       - 기준점은 요소의 왼쪽
+       - % 단위를 쓸경우 기준은 요소의 width값
+       - 이동방향: + 오른쪽, -는 왼쪽 */
 
       #transform-box3:hover img {
         /* x축 이동 tftx */
         transform: translateX(-50%);
         /* -> %단위 기준은 항상 자기자신의 크기다!!! */
+      }
+
+      /* 4. transform : 4. translateY(거리) - Y축이동
+        - 단위 : px, % 등
+        - 현재 위치로부터 이동
+        - 기준점은 요소의 윗쪽
+        - % 단위를 쓸경우 기준은 요소의 height값
+        - 이동방향: + 아랫쪽, -는 윗쪽 */
+      #transform-box4:hover img {
+        /* y축 이동 tfty */
+        transform: translateY(200%);
+        /* -> %단위 기준은 항상 자기자신의 크기다!!! */
+      }
+
+      /* 5. transform : translate(x축거리,y축거리) - X,Y축이동
+        - 단위 : px, % 등
+        - 현재 위치로부터 이동
+        - 기준점은 요소의 윗쪽, 왼쪽선
+        - % 단위를 쓸경우 기준은 요소의 width,height값
+        - 이동방향: + 오른쪽/아랫쪽, -는 왼쪽/윗쪽 */
+      #transform-box5:hover img {
+        /* x,y축이동 tft */
+        /* transform: translate(-100%, -100%); */
+        /* -> %단위 기준은 항상 자기자신의 크기다!!! */
+
+        /* translate: -100%; -> x축 이동 */
+        /* translate: 0 -100%; -> y축 이동 */
+        translate: -100% -100%; /* -> x,y축 동시이동 */
+
+        /* 원래는 translate는 transform하위 셋팅 속성임!
+        translate의 사용율이 높아짐에 따라 속성값으로 독립됨!
+
+        [ translate 속성]
+         translate: 값 값; -> x,y축 이동설정값
+         translate: 값; -> x축 이동설정값
+         translate: 0 값; -> y축 이동설정값 */
+
+        /* 투명도조정 - opacity속성 */
+        opacity: 0.5;
       }
     </style>
   </head>
