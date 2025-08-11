@@ -88,8 +88,14 @@
         /* 5등분하기 */
         /* 그냥 20% 적어도 되지만 나중에 바꾸기에는 calc로 적는게 쉬움 */
         width: calc(100%/5);
-        /* 아래쪽 마진 */
-        margin-bottom: 50px;
+        /* 중앙정렬 tac */
+        text-align: center;
+    }
+    
+    /* 5번째 div 이후 자식 마진탑 주기 */
+    .main-contents > div:nth-child(5) ~ div{
+          /* 위쪽 마진 */
+          margin-top: 20px;
       }
       
       /* 캐릭터 이미지 */
