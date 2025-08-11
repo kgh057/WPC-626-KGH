@@ -193,7 +193,7 @@
       - 이동방향: + 오른쪽/아랫쪽, -는 왼쪽/윗쪽 
       *********************************************************************/
 
-        #transform-box5:hover img {
+      #transform-box5:hover img {
         /* x,y축이동 tft */
         /* transform: translate(-100%, -100%); */
         /* -> %단위 기준은 항상 자기자신의 크기다!!! */
@@ -217,7 +217,7 @@
       }
 
       /********************************************************************* 
-      6. rotate(각도deg) - 원형회전
+      6. transform : rotate(각도deg) - 원형회전
       - 각도의 숫자가 양수이면 시계방향, 음수는 반시계방향
       - 기본회전축은 정중앙 
       (변경가능: transform-origin)
@@ -230,12 +230,12 @@
       *********************************************************************/
 
       /* 이미지 회전축 변경하기 */
-      #transform-box6:hover img{
-        
+      #transform-box6:hover img {
+        /* transform-origin: right bottom; */
+        transform-origin: 20% 20%;
       }
 
-
-      #transform-box6:hover img{
+      #transform-box6:hover img {
         /* 원형회전 : tfr */
         /* transform: rotate(4587deg); */
 
@@ -263,6 +263,77 @@
 
         /* 트랜지션 시간 늘리기 : trsd */
         transition-duration: 10s;
+      }
+
+      /*********************************************************************
+      7. transform : skew - x,y축 기울임
+      - skewX(각도deg), skewY(각도deg)
+      - skew(x축,y축)
+      - 각도가 양수/음수에 따라 기울임 방향이 달라짐
+        *********************************************************************/
+
+      #transform-box7:hover img {
+        /* x축 skew */
+        /* transform: skewX(30deg); */
+        /* y축 skew */
+        transform: skewY(30deg);
+      }
+
+      /********************************************************************* 
+      8. transform : scale(x축배수, y축배수)
+      - 값을 하나만쓰면 양방향 같은 값 셋팅
+      - 배수가 1보다 크면 확대, 작으면 축소
+      - scaleX(배수), scaleY(배수) - x,y별셋팅
+      - 값이 0이면 사라짐
+      -> 가끔 크기가 정해진 요소를 일정크기로 축소, 확대해서 크기를 맞출때도 용이함!
+
+      *********************************************************************
+
+      [ scale 속성 ]
+       scale: 값; -> 전체확대/축소
+       scale: 값 값; -> x,y 따로 확대/축소
+       scale: 값 1; -> x확대/축소
+       scale: 1 값; -> y확대/축소
+      *********************************************************************/
+
+      #transform-box8:hover img {
+        /* transform: scale(2); */
+        scale: 2;
+      }
+
+      /*********************************************************************
+      9. 복합적용하기
+      transform: 속성1 속성2 속성3 ...;
+      *********************************************************************/
+
+      #transform-box9:hover img {
+        transform: scale(5) translate(-200%, -100%) rotateX(12000deg)
+          skewX(50deg) rotate(5300deg);
+
+        /* 트랜지션 시간 늘리기 */
+        transition: 30s;
+      }
+
+      /* 내가 여러개 주기! */
+      #transform-box10:hover img {
+        transform: scale(2) translate(-100%, -100%) rotateY(4turn)
+          rotate(360deg);
+
+        /* 트랜지션 시간 늘리기 */
+        transition: 20s ease-in-out;
+      }
+
+      /* 인트로 등장 애니메이션 설정하기 */
+      /* animate를 배우기 전이므로 : :hover를 사용! */
+      .main-contents {
+        /* 오른쪽 바깥에 나가있게 셋팅함! translate사용! */
+        /* translate: 110%; */
+        /* 트랜지션 trs */
+        transition: 0.8s ease-out 1s;
+      }
+      /* 오버시 등장 */
+      body:hover .main-contents {
+        translate: 0;
       }
     </style>
   </head>
