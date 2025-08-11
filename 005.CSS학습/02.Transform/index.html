@@ -51,6 +51,7 @@
 
       /* 전체 부모박스 */
       .main-contents {
+        /* 박스 셋팅 */
         max-width: 1500px;
         margin: 100px auto;
         border: 10px solid rgb(101, 135, 78);
@@ -110,7 +111,7 @@
       [ Transform 효과주기 ]
       - 선택요소의 크기, 회전, 이동, 기울임 등 변형을 하기위한 속성
       - 2D, 3D 지원됨
-      
+      ********************************************************************
       1. transform : rotateY(각도deg) - Y축회전
       - deg 는 각도의 단위(도:degree)
       
@@ -138,7 +139,7 @@
       - deg 는 각도의 단위(도:degree) 
       *********************************************************************/
 
-      #transform-box2:hover img {
+      #transform-box2 img {
         /* 미리 x축 회전 해놓기 tfrx*/
         transform: rotateX(180deg);
         /* 필터블러 */
@@ -148,7 +149,7 @@
       /* 오버시 원상복귀 */
       #transform-box2:hover img {
         /* 미리 x축 회전 해놓기 tfrx */
-        transform: rotate(0deg);
+        transform: rotateX(0deg);
         /* 필터블러 */
         filter: blur(0px);
       }
@@ -201,13 +202,15 @@
         /* translate: 0 -100%; -> y축 이동 */
         translate: -100% -100%; /* -> x,y축 동시이동 */
 
-        /* 원래는 translate는 transform하위 셋팅 속성임!
+        /*********************************************************************
+         원래는 translate는 transform하위 셋팅 속성임!
         translate의 사용율이 높아짐에 따라 속성값으로 독립됨!
 
         [ translate 속성]
          translate: 값 값; -> x,y축 이동설정값
          translate: 값; -> x축 이동설정값
-         translate: 0 값; -> y축 이동설정값 */
+         translate: 0 값; -> y축 이동설정값 
+         *********************************************************************/
 
         /* 투명도조정 - opacity속성 */
         opacity: 0.5;
