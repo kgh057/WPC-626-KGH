@@ -150,11 +150,11 @@
       }
 
       /* 3. transform : translateX(거리) - X축이동
-       - 단위 : px, % 등
-       - 현재 위치로부터 이동
-       - 기준점은 요소의 왼쪽
-       - % 단위를 쓸경우 기준은 요소의 width값
-       - 이동방향: + 오른쪽, -는 왼쪽 */
+      - 단위 : px, % 등
+      - 현재 위치로부터 이동
+      - 기준점은 요소의 왼쪽
+      - % 단위를 쓸경우 기준은 요소의 width값
+      - 이동방향: + 오른쪽, -는 왼쪽 */
 
       #transform-box3:hover img {
         /* x축 이동 tftx */
@@ -163,11 +163,11 @@
       }
 
       /* 4. transform : 4. translateY(거리) - Y축이동
-        - 단위 : px, % 등
-        - 현재 위치로부터 이동
-        - 기준점은 요소의 윗쪽
-        - % 단위를 쓸경우 기준은 요소의 height값
-        - 이동방향: + 아랫쪽, -는 윗쪽 */
+      - 단위 : px, % 등
+      - 현재 위치로부터 이동
+      - 기준점은 요소의 윗쪽
+      - % 단위를 쓸경우 기준은 요소의 height값
+      - 이동방향: + 아랫쪽, -는 윗쪽 */
       #transform-box4:hover img {
         /* y축 이동 tfty */
         transform: translateY(200%);
@@ -175,12 +175,12 @@
       }
 
       /* 5. transform : translate(x축거리,y축거리) - X,Y축이동
-        - 단위 : px, % 등
-        - 현재 위치로부터 이동
-        - 기준점은 요소의 윗쪽, 왼쪽선
-        - % 단위를 쓸경우 기준은 요소의 width,height값
-        - 이동방향: + 오른쪽/아랫쪽, -는 왼쪽/윗쪽 */
-      #transform-box5:hover img {
+      - 단위 : px, % 등
+      - 현재 위치로부터 이동
+      - 기준점은 요소의 윗쪽, 왼쪽선
+      - % 단위를 쓸경우 기준은 요소의 width,height값
+      - 이동방향: + 오른쪽/아랫쪽, -는 왼쪽/윗쪽 */
+        #transform-box5:hover img {
         /* x,y축이동 tft */
         /* transform: translate(-100%, -100%); */
         /* -> %단위 기준은 항상 자기자신의 크기다!!! */
@@ -199,6 +199,17 @@
 
         /* 투명도조정 - opacity속성 */
         opacity: 0.5;
+      }
+
+      /* 6. rotate(각도deg) - 원형회전
+      - 각도의 숫자가 양수이면 시계방향, 음수는 반시계방향
+      - 기본회전축은 정중앙
+      (변경가능: transform-origin) */
+      #transform-box6:hover img{
+        /* 원형회전 : tfr */
+        transform: rotate(4587deg);
+        /* 트랜지션 시간 늘리기 : trsd */
+        transition-duration: 10s;
       }
     </style>
   </head>
