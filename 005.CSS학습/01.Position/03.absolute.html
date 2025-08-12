@@ -224,6 +224,45 @@
       .absolute-images:hover img:last-child{
         opacity: 1;
       }
+
+      /* 앱솔루트 위치값으로 크기 만들기 */
+      .car-box{
+        position: absolute;
+        /* 맨위 왼쪽에 위치 */
+        top: 0;
+        left: 0;
+        /* 부모는? 보이는 화면 */
+
+        /* 가로크기 - 부모의 25% */
+        width: 25%;
+
+        /* 보더 */
+        border: 4px dotted darkblue;
+        border-radius: 20px;
+      }
+
+      /* 자동차 이미지 */
+      .car-box img{
+        width: 100%;
+        /* 이미지는 한쪽 크기만 주면 나머지 방향크기는 자동비율 유지함! */
+      }
+
+      /* 자동차 앱솔루트 타이틀박스 */
+      .car-box h3{
+        position: absolute;
+        /* 위치값으로 부모가로크기를 채우게함! 동적크기 생성! */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* 부모는? .car-box */
+        border: 1px solid red;
+
+        /* 글자 중앙 정렬 tac */
+        text-align: center;
+
+        /* 기본 마진 없애기 */
+        margin: 0;
+      }
     </style>
   </head>
   <body>
@@ -252,6 +291,13 @@
       <img src="./images/ab3.jpg" alt="토르" />
       <img src="./images/ab4.jpg" alt="닥스" />
     </div>
+
+    <!-- 앱솔루트 위치값으로 크기 만들기 -->
+     <div class="car-box">
+      <img src="./images/car.png" alt="자동차">
+      <!-- 위치값으로 크기 만들 타이틀박스 -->
+       <h3>레드 스포츠카🚗</h3>
+     </div>
 
     <!-- 부모를 찾는 앱솔루트! -->
     <div class="bx2 s5">
