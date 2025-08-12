@@ -70,6 +70,9 @@
       #a2 {
         position: absolute;
         width: 650px;
+        right: 0;
+        bottom: 0;
+
         /* 오른쪽 아래 0 위치 부모는? 보이는 화면 */
         background: url(./images/superman.png) no-repeat center/cover;
       }
@@ -112,7 +115,7 @@
         border-radius: 20px;
         background-color: lightblue;
         box-shadow: 5px 5px 5px #00000070;
-        font-size: 35px;
+        font-size: 45px;
       }
 
       /* 부모를 찾는 앱솔루트! */
@@ -160,6 +163,7 @@
         width: 25%;
         height: 40%;
 
+        /* 보더 */
         border: 10px dotted darkblue;
       }
 
@@ -169,13 +173,14 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        /* 나의 부모는? */
+        /* 나의 부모는? .s8*/
 
         /* 아웃라인 ol */
         outline: 4px dotted darkmagenta;
       }
 
-      /* 앱솔루트 판타롱스타킹 */
+      /* 앱솔루트 판타롱스타킹
+      -> 앱솔루트 박스에 width,  */
       .a5 {
         position: absolute;
         top: 20%;
@@ -184,6 +189,40 @@
 
         /* 아웃라인 */
         outline: 10px ridge goldenrod;
+      }
+
+      /* 이미지가 박스에 단독으로 들어갈 경우 하단에 생기는 공백 없애기 */
+      .a5 img {
+        vertical-align: middle;
+        /* 인라인요소간 세로정렬 속성인 vertical-align의 값을 
+        top/middle/bottom 중 어떤 값을 사용해도 하단 공백을 없애는 효과가 있다! (단, baseline값 효과 없음) */
+      }
+
+      /* 앱솔루트끼리는 서로 겹친다 */
+      .absolute-images{
+        width: 300px;
+        height: 400px;
+        /* 보더 액자 */
+        border: 20px ridge silver;
+      }
+      /* 이미지가 앱솔루트 */
+      .absolute-images img{
+        /* 앱솔루트 포지션 poa */
+        position: absolute;
+        /* 젠틀앱솔루트 */
+
+        width: 300px;
+        height: 400px;
+      }
+      .absolute-images img:last-child{
+        opacity: 0;
+        /* 트랜지션 trs */
+        transition: 0.3s;
+      }
+      
+      /* 싸고있는 박스의 마우스 오버시 투명도1 */
+      .absolute-images:hover img:last-child{
+        opacity: 1;
       }
     </style>
   </head>
@@ -206,6 +245,12 @@
     <!-- 앱솔루트 판타롱스타킹 -->
     <div class="a5" title="앱솔루트 판타롱스타킹">
       <img src="./images/ab0.jpg" alt="포스터" />
+    </div>
+
+    <!-- 앱솔루트끼리는 서로 겹친다! -->
+    <div class="absolute-images">
+      <img src="./images/ab3.jpg" alt="토르" />
+      <img src="./images/ab4.jpg" alt="닥스" />
     </div>
 
     <!-- 부모를 찾는 앱솔루트! -->
