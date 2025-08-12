@@ -46,8 +46,7 @@
         line-height: 100px;
 
         /* 글자 테두리 */
-        text-shadow: 4px 0 #416033, -4px 0 #416033, 0 4px #416033,
-          0 -4px #416033;
+        text-shadow: 4px 0 #416033, 0px 0 #416033, 0 0px #416033, 0 0px #416033;
         /* -webkit-text-stroke: 1px red; */
       }
 
@@ -70,7 +69,7 @@
 
         /* 겹쳐지는 부분 배경 흐리게 처리하기
         -> 백드롭필터! 블러! */
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(3px);
         /* backdrop-filter: sepia(90%); */
         /* backdrop-filter: invert(70%); */
         /* backdrop-filter: hue-rotate(120deg); */
@@ -158,6 +157,7 @@
         /* 필터블러 */
         filter: blur(2px);
       }
+
       /* 오버시 원상복귀 */
       #transform-box3:hover img {
         /* 미리 x축 회전 해놓기 : tfrx */
@@ -167,6 +167,9 @@
 
         /* 오버시 2배 크기 */
         scale: 2;
+
+        position: relative;
+        z-index: 1;
       }
 
       /********************************************** 
@@ -180,10 +183,13 @@
         5. 
     **********************************************/
       #transform-box5:hover img {
-         /* y축이동 tfty */
-         transform: translateY(200%);
+        /* y축이동 tfty */
+        transform: translateY(200%);
         /* -> %단위 기준은 항상 자기자신의 크기다!!! */
+        position: relative;
+        z-index: 1;
       }
+
       /************************************** 
         6. 
     **************************************/
@@ -234,14 +240,16 @@
       /***************************************** 
         10. 
     *****************************************/
-      #transform-box10 img {
-        width: 200px;
-        height: 200px;
+      #transform-box10 {
+        position: relative;
+        height: 204px;
       }
-
       /* 이미지가 겹치게 앱솔루트 셋팅 */
       #transform-box10 img {
         position: absolute;
+        top: 0;
+        left: 50%;
+        translate: -50%;
         width: 200px;
         height: 200px;
         border-radius: 50%;
@@ -281,6 +289,19 @@
         transform: rotateY(90deg);
         /* 트랜지션 trs : 바로 출발, 처음만 천천히 ease-in */
         transition: 0.4s ease-in;
+      }
+
+      /* 인트로 등장 애니메이션 설정하기 */
+      /* animate를 배우기 전이므로 : :hover를 사용! */
+      .main-contents {
+        /* 오른쪽에 나가있게 셋팅함! translate사용! */
+        translate: 150%;
+        /* 트랜지션 trs */
+        transition: 0.8s ease-out 1s;
+      }
+      /* 오버시 등장 */
+      body:hover .main-contents {
+        translate: 0;
       }
     </style>
   </head>
