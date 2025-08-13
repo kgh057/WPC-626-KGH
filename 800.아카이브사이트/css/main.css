@@ -186,10 +186,13 @@ body {
   /* 절반 크기 셋팅 */
   width: 50%;
 
+  /* 최소 높이값 설정 */
+  min-height: 455px;
+
   /* 패딩 -> 값을 %로 잡을 경우 기준은 부모박스의 width다!
   이 기준은 margin도 동일하다! */
   /* padding: 위아래 양쪽 */
-  padding: 5% 7% ;
+  padding: 5% 7%;
 
   /* 패딩,보더 포함 박스 셋팅 bxb */
   box-sizing: border-box;
@@ -197,4 +200,53 @@ body {
 /* 플롯팅 해제 clear는 core.css의 clb클래스로 처리함! */
 
 /* 왼쪽박스 */
-/* 오른쪽박스 */
+.left-part {
+  /* 부모자격 - 가상요소 after 앱솔루트자식의 부모 */
+  position: relative;
+}
+/* 가상요소 중앙구분선 넣기! */
+.left-part::after {
+  content: "";
+  position: absolute;
+  /* 앱솔루트는 자동block! */
+  top: 15%;
+  right: 0;
+  /* 부모는? .left-part */
+  width: 1px;
+  height: 70%;
+  background-color: #000000;
+}
+/* 링크박스 a요소 */
+.link-box a {
+  /* 가상요소 자식이 block이므로 최소한 
+  display를 inline-block로 해야 자신의 크기만큼
+  크기를 가지게 된다! 왜? inline내부의 block은
+  inline부모를 무시하고 바깥박스를 기준하여
+  끝까지 width를 차지한다! */
+  display: inline-block;
+  font-size: 32px;
+  line-height: 33px;
+}
+/* 가상요소로 애니메이션 밑줄만들기 */
+.link-box a::after {
+  content: "";
+  display: block;
+  /* 처음에 가로크기0 (돌아올때) */
+  width: 0;
+  /* 마진값으로 돌아올때 오른쪽으로 나가는것 처럼 보이기 */
+  margin-left: 100%;
+  /* 마진값의 %는 부모박스(a요소)의 가로크기다! */
+  height: 2px;
+  background-color: red;
+  /* 트랜지션 trs */
+  transition: 0.3s linear;
+}
+/* a에 오버시 가상요소 밑줄 글씨만큼 늘어나기! */
+.link-box a:hover::after {
+  width: 100%;
+  /* 왼쪽마진값은 오버시 0이 되여야하고
+  애니메이션 처리하지 말아야함! 따라서
+  transition 속성값을 width로 써서 처리한다! */
+  margin-left: 0;
+  transition: width 0.3s linear;
+}
