@@ -137,29 +137,30 @@ body {
 /********** 2-2. 트레이닝 프로젝트 파트 **********/
 /* 공통 pj박스 진계 속박스 div */
 .pj-box > div {
-  padding-top: 18px;
+  /* 위, 아래 패딩 */
+  padding-top: 18px 0;
 }
 /********** 2-2-1. 제목박스 **********/
 .sub-part-title {
   /* 박스설정 */
-  padding-bottom: 28px;
+  padding-bottom: 78px;
   text-align: center;
 
   /* 글자설정 */
-  font-size: 36px;
+  font-size: 60px;
 }
 
 /* 구분선은 타이틀박스의 가상요소로 구현함 */
 .sub-part-title::before {
   content: "";
   display: block;
-  /* 하단마진 28px 추가 
+  /* 하단마진 78px 추가 
   margin: 위 양쪽 아래 */
-  margin: 0 auto 28px;
+  margin: 0 auto 78px;
 
   max-width: 865px;
   height: 1px;
-  background-color: #ccc;
+  background-color: #fff;
 }
 /********** 2-2-2. 링크박스 **********/
 .link-box {
@@ -174,5 +175,26 @@ body {
   예전 형식: rgba(숫자,숫자,숫자,알파값) 
   새로운 형식: rgba(숫자 숫자 숫자 / 알파값) */
   /* 배경색 */
-  background-color: #d8f8ff;
+  background-color: #97d7e5;
 }
+
+/* 플롯팅 설정하기 */
+.link-box > div {
+  /* 옆으로 흐르게 */
+  float: left;
+
+  /* 절반 크기 셋팅 */
+  width: 50%;
+
+  /* 패딩 -> 값을 %로 잡을 경우 기준은 부모박스의 width다!
+  이 기준은 margin도 동일하다! */
+  /* padding: 위아래 양쪽 */
+  padding: 5% 7% ;
+
+  /* 패딩,보더 포함 박스 셋팅 bxb */
+  box-sizing: border-box;
+}
+/* 플롯팅 해제 clear는 core.css의 clb클래스로 처리함! */
+
+/* 왼쪽박스 */
+/* 오른쪽박스 */
