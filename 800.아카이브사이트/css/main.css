@@ -62,12 +62,12 @@ body {
   font-size: 45px;
   line-height: 93px;
 }
-.fa-github{
+.fa-github {
   line-height: 93px;
 }
 
 /* 나의 캐릭터 링크 박스 */
-.my-cha-link{
+.my-cha-link {
   /* a요소는 위아래 마진 적용 안되므로 인라인블록으로 display 변경함! */
   /* display: inline-block; */
   /* margin-top: 22px; */
@@ -77,18 +77,17 @@ body {
 }
 
 /* 처음에 마지막째 이미지는 안보이게 함 */
-.my-cha-link img:last-child{
+.my-cha-link img:last-child {
   /* display: none; */
 }
 /* 마우스 오버시 첫번째 이미지 안보이게 함 */
-.my-cha-link:hover img:first-child{
+.my-cha-link:hover img:first-child {
   /* display: none; */
 }
 /* 마우스 오버시 마지막째 이미지 보이게 함 */
-.my-cha-link:hover img:last-child{
+.my-cha-link:hover img:last-child {
   /* display: inline; */
 }
-
 
 /********** 2. 메인영역 **********/
 .main-area {
@@ -100,7 +99,7 @@ body {
 /* 자기소개 겉박스 */
 #intro-box {
   /* 가로폭 끝까지 그라데이션 나오게 겉박스에 셋팅함! */
-  background-image: linear-gradient(to bottom, #d8f8ff, 0% #000 83%);
+  background-image: linear-gradient(to bottom, #d8f8ff 0%, #000 83%);
 }
 
 /* 자기소개 속박스 */
@@ -114,7 +113,6 @@ body {
   font-size: 48px;
   font-weight: normal;
   margin-bottom: 70px;
-  margin-top: calc(604px / 2 - 364px / 2);
 }
 /* 자기소개글 내용 박스 */
 .intro-box .txt-box p {
@@ -137,7 +135,44 @@ body {
 }
 
 /********** 2-2. 트레이닝 프로젝트 파트 **********/
+/* 공통 pj박스 진계 속박스 div */
+.pj-box > div {
+  padding-top: 18px;
+}
 /********** 2-2-1. 제목박스 **********/
+.sub-part-title {
+  /* 박스설정 */
+  padding-bottom: 28px;
+  text-align: center;
+
+  /* 글자설정 */
+  font-size: 36px;
+}
+
+/* 구분선은 타이틀박스의 가상요소로 구현함 */
+.sub-part-title::before {
+  content: "";
+  display: block;
+  /* 하단마진 28px 추가 
+  margin: 위 양쪽 아래 */
+  margin: 0 auto 28px;
+
+  max-width: 865px;
+  height: 1px;
+  background-color: #ccc;
+}
 /********** 2-2-2. 링크박스 **********/
-/* 왼쪽박스 */
-/* 오른쪽박스 */
+.link-box {
+  /* 가로크기는 레이아웃은 아니지만 12그리드 크기를 기준해서 준다! */
+  width: calc(100% / 12 * 10);
+  /* 마영오! - 블록요소 가로중앙 */
+  margin: 0 auto;
+  /* 둥근모서리 20 : bdrs20 */
+  border-radius: 20px;
+  /* 배경색 흰색 반투명(80%) 
+  rgba형식에서 a는 알파값으로 투명도이며 0.8이면 80%를 의미함! 
+  예전 형식: rgba(숫자,숫자,숫자,알파값) 
+  새로운 형식: rgba(숫자 숫자 숫자 / 알파값) */
+  /* 배경색 */
+  background-color: #d8f8ff;
+}
