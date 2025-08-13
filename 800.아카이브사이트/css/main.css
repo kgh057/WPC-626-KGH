@@ -237,7 +237,7 @@ body {
   /* background-color: red; */
   border-bottom: 2px solid #000;
   /* 트랜지션 trs */
-  transition: 2s linear;
+  transition: 1.5s linear;
 
   /* gif애니메이션 이미지 배경으로 넣기 */
   background: url(../images/train.gif) no-repeat right/auto 100%;
@@ -245,7 +245,7 @@ body {
   -> transform: scaleX(-1)
   참고) Y축 뒤집기는 transform: scaleY(-1) */
   transform: scaleX(-1);
-} 
+}
 
 /* a에 오버시 가상요소 밑줄 글씨만큼 늘어나기! */
 .link-box a:hover::before {
