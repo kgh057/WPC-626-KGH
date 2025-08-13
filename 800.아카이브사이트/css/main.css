@@ -162,6 +162,16 @@ body {
   height: 1px;
   background-color: #fff;
 }
+
+/* 파트제목 */
+.part-title{
+  color: #222;
+  font-size: 35px;
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
+}
+
 /********** 2-2-2. 링크박스 **********/
 .link-box {
   /* 가로크기는 레이아웃은 아니지만 12그리드 크기를 기준해서 준다! */
@@ -214,7 +224,7 @@ body {
   /* 부모는? .left-part */
   width: 1px;
   height: 70%;
-  background-color: #000000;
+  background-color: #565656;
 }
 /* 링크박스 a요소 */
 .link-box a {
