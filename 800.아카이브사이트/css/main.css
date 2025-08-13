@@ -218,14 +218,11 @@ body {
 }
 /* 링크박스 a요소 */
 .link-box a {
-  /* 가상요소 자식이 block이므로 최소한 
-  display를 inline-block로 해야 자신의 크기만큼
-  크기를 가지게 된다! 왜? inline내부의 block은
-  inline부모를 무시하고 바깥박스를 기준하여
-  끝까지 width를 차지한다! */
+  /* 가상요소 자식이 block이므로 최소한 display를 inline-block로 해야 자신의 크기만큼 크기를 가지게 된다!
+  왜? inline내부의 block은 inline부모를 무시하고 바깥박스를 기준하여 끝까지 width를 차지한다! */
   display: inline-block;
   font-size: 32px;
-  line-height: 33px;
+  line-height: 40px;
 }
 /* 가상요소로 애니메이션 밑줄만들기 */
 .link-box a::before {
