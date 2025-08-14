@@ -295,14 +295,14 @@
       /* 인트로 등장 애니메이션 설정하기 */
       /* animate를 배우기 전이므로 : :hover를 사용! */
       .main-contents {
-        /* 오른쪽에 나가있게 셋팅함! translate사용! */
-        translate: 150%;
+        /* 위쪽에 나가있게 셋팅함! translate사용! */
+        translate: 0 -150%;
         /* 트랜지션 trs */
-        transition: 0.8s ease-out 1s;
+        transition: 1s ease-out 1s;
       }
-      /* 오버시 등장 */
+      /* 오버시 등장 - 아래로 내려오게 */
       body:hover .main-contents {
-        translate: 0;
+        translate: 0 18%;
       }
     </style>
   </head>
