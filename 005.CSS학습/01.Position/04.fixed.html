@@ -210,19 +210,39 @@
         /* 부모는? 픽스드 보이는 화면
         static이 아니면 다 부모임 */
 
+        /* 맨위로! */
+        z-index: 999999; 
+
         /* 보더 */
         border: 10px ridge goldenrod;
       }
+      
       /* 포스터보기 타이틀 */
       .poster-fixed h3{
         /* 앲솔루트 포지션 */
         position: absolute;
         /* 위치값 사용시 부모는? .poster-fixed */
-        top: 0;
-        right: 100%;
+        /* 보더크기는 앱솔루트에서 제외되므로 보더크기만큼 -10px */
+        top: -10px;
+        /* 오른쪽 기준선으로부터 밀기
+        부모박스 보더 제외한 내부크기 100% + 한쪽보더 10px */
+        right: calc(100% + 10px);
 
         /* 기본마진 없앰 */
         margin: 0;
+        /* 글자중앙정렬은 글자 writing-mode에서 진행되는 글자방향의 중앙을 뜻함! */
+        text-align: center;
+        /* 높이값 = 부모 100% + 위아래보더값 20px */
+        height: calc(100% + 20px);
+        /* 글자배치 세로방향 & 진행방향 left -> right (lr) */
+        writing-mode: vertical-lr;
+        letter-spacing: 30px;
+        font-size: 24px;
+        color: lightgreen;
+        text-shadow: 2px 2px 2px #0000009a;
+        padding: 0 10px;
+        background-color: goldenrod;
+        border-radius: 10px 0 0 10px;
       }
 
       /* 이미지가 박스에 단독으로 들어갈 경우 하단에 생기는 공백 없애기 */
