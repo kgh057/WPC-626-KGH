@@ -206,19 +206,30 @@
       .poster-fixed {
         position: fixed;
         top: 20%;
-        right: 10%;
+        right: 0;
         /* 부모는? 픽스드 보이는 화면
         static이 아니면 다 부모임 */
 
+        /* 오른쪽에 박스를 붙여놓고 translate로 내크기만큼 오른쪽방향(x축)으로 이동! */
+        translate: 100%;
+
         /* 맨위로! */
-        z-index: 999999; 
+        z-index: 999999;
 
         /* 보더 */
         border: 10px ridge goldenrod;
+
+        /* 트랜지션 trs */
+        transition: 0.4s ease-out;
       }
-      
+
+      /* 포스터박스 오버시 translate로 보이기 */
+      .poster-fixed:hover {
+        translate: 0;
+      }
+
       /* 포스터보기 타이틀 */
-      .poster-fixed h3{
+      .poster-fixed h3 {
         /* 앲솔루트 포지션 */
         position: absolute;
         /* 위치값 사용시 부모는? .poster-fixed */
@@ -341,7 +352,7 @@
     <div class="poster-fixed" title="픽스드로 포스터 미리보기">
       <img src="./images/ab0.jpg" alt="포스터" />
       <!-- 포스터보기 타이틀 박스 -->
-       <h3>포스터보기</h3>
+      <h3>포스터보기</h3>
     </div>
 
     <!-- 앱솔루트끼리는 서로 겹친다! -->
