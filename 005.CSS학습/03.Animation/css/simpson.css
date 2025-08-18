@@ -26,7 +26,7 @@
 }
 
 /* 임시로 숨기기 */
-.door ~ * {
+.lisa ~ * {
   display: none;
 }
 
@@ -52,4 +52,23 @@
 
   /* 문 y축 회전 테스트 */
   /* rotate: y 130deg; */
+}
+
+/* 3. 마지심슨 */
+.marge {
+  position: absolute;
+  bottom: -145px;
+  right: -233px; /* -250px; */
+  width: 350px;
+  transform-origin: bottom;
+  rotate: 0deg; /* -25deg; */
+}
+
+/* 4. 리사심슨 */
+.lisa {
+  position: absolute;
+  top: 150px;
+  left: -162px; /* -102px; */
+  rotate: 90deg;
+  width: 125px;
 }
