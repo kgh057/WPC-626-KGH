@@ -26,7 +26,7 @@
 }
 
 /* 임시로 숨기기 */
-.lisa ~ * {
+.maggie ~ * {
   display: none;
 }
 
@@ -67,8 +67,16 @@
 /* 4. 리사심슨 */
 .lisa {
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: -162px; /* -102px; */
   rotate: 90deg;
   width: 125px;
+}
+
+/* 5. 메기심슨 */
+.maggie{
+  position: absolute;
+  bottom: -197px; /* -57px; */
+  left: 20px;
+  width: 150px;
 }
