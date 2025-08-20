@@ -54,6 +54,24 @@
   /* rotate: y 130deg; */
 }
 
+/* 말풍선 */
+.words {
+  /* 앱솔루트 : poa */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  /* 부모는? .house */
+  /* 박스설정 */
+  background-color: #fff;
+  padding: 35px;
+  border-radius: 50%;
+  border: 10px solid #ffeb86;
+  text-align: center;
+
+  /* 글자설정 font: 스두크/줄체 -> 크기/글자체 필수! */
+  font: 20px/1.7 verdana;
+}
+
 /* 3. 마지심슨 */
 .marge {
   position: absolute;
@@ -74,9 +92,13 @@
 }
 
 /* 5. 메기심슨 */
-.maggie{
+.maggie {
   position: absolute;
   bottom: -197px; /* -57px; */
   left: 20px;
   width: 150px;
+}
+
+/* 바트심슨 */
+.bart {
 }
