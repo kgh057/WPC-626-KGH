@@ -151,7 +151,7 @@ transform: rotateY(각도deg)
 /* 4-2. 리사심슨 애니 키프레임 */
 @keyframes lisa-ani {
   to {
-    left: -63px;
+    left: -102px;
   }
 }
 

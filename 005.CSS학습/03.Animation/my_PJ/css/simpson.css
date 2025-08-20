@@ -31,7 +31,7 @@ body{
 .house {
   position: absolute;
   /* 부모 자격 - 하위 앱솔루트 요소들의 부모 */
-  top: 114px;
+  top: 92px;
   /* 가로방향 중앙이동 */
   left: 50%;
   translate: -50%;
@@ -199,7 +199,7 @@ body{
 /* 7. TV */
  #tv{
   position: absolute;
-  top: 65px;
+  top: 40px;
   left: 55%;
   translate: -50%;
   width: 1052px;
