@@ -54,14 +54,14 @@
           (높이값을 기준으로 작동하기 때문임!!!)
 
       **************************************/
-      
+
         z-index: 999;
 
         /* 박스모델 */
         width: 100%;
         text-align: center;
         margin: 0;
-        padding: 20px;        
+        padding: 20px;
         border: 4px solid darkgreen;
         border-radius: 0 0 50% 50%;
         /* border-radius: 50px 200px 300px; */
@@ -78,16 +78,13 @@
            -> 왼쪽위 부터 시계방향
         */
 
-
         /* 패딩,보더 포함박스 설정 : bxb */
         box-sizing: border-box;
-
 
         background-color: lightskyblue;
 
         /* 박스그림자 : bxsh */
-        box-shadow: 5px 5px 4px
-          rgba(0, 0, 0, 0.412);
+        box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.412);
 
         /* 글자관련 */
         font-size: 60px;
@@ -97,8 +94,7 @@
       #a1 {
         /* 포지션 앱솔루트 : poa */
         position: absolute;
-        background: url(./images/ab1.jpg)
-          no-repeat center/cover;
+        background: url(./images/ab1.jpg) no-repeat center/cover;
       }
 
       /* 두번째 앱솔루트 박스 */
@@ -110,8 +106,7 @@
         /* 나의 부모는? 포지션이 static이 아닌요소가
             없으므로 보이는 화면(window)을 기준한다! */
 
-        background: url(./images/ab1.jpg)
-          no-repeat center/cover;
+        background: url(./images/ab1.jpg) no-repeat center/cover;
       }
 
       #r1 {
@@ -123,8 +118,7 @@
         /* 왼쪽으로부터 100px : l100 */
         left: 100px;
 
-        background: url(./images/ab5.jpg)
-          no-repeat center/cover;
+        background: url(./images/ab5.jpg) no-repeat center/cover;
       }
       #r2 {
         /* 포지션 relative */
@@ -132,8 +126,7 @@
         top: 150px;
         left: 150px;
 
-        background: url(./images/ab4.jpg)
-          no-repeat center/cover;
+        background: url(./images/ab4.jpg) no-repeat center/cover;
       }
 
       /* 첫번째 박스에 포지션 체크 */
@@ -175,8 +168,7 @@
         width: 50px;
         height: 50px;
         color: #fff;
-        background: url(./images/ab1.jpg)
-          no-repeat center/cover;
+        background: url(./images/ab1.jpg) no-repeat center/cover;
       }
 
       /* .a4는 위치이동값을 사용하자! -> 부모찾아 삼만리! */
@@ -271,7 +263,7 @@
       }
 
       /* 나는 젠틀픽스드다! */
-      #f1{
+      #f1 {
         position: fixed;
         z-index: 100;
         width: 50%;
@@ -282,7 +274,7 @@
       }
 
       /* 포스터 보기 박스 */
-      .fixed-poster{
+      .fixed-poster {
         position: fixed;
         top: 250px;
         right: -209px;
@@ -290,19 +282,18 @@
         z-index: 9999999;
 
         /* 트랜지션 : trs 속시이지 */
-        transition: .4s ease-out;
+        transition: 0.4s ease-out;
 
         /* background-color: red; */
       }
       /* 포스터에 마우스 오버시
       right값 변경으로 포스터 보이기 */
-      .fixed-poster:hover{
+      .fixed-poster:hover {
         right: 0;
       }
 
-
       /* 글자span */
-      .fixed-poster span{
+      .fixed-poster span {
         position: absolute;
         top: 0;
         left: -50px;
@@ -324,7 +315,7 @@
         /* 참고) 단어간격 : word-spacing */
       }
       /* 포스터 이미지 */
-      .fixed-poster img{
+      .fixed-poster img {
         height: 300px;
         /* 블록박스에 단독 이미지
         하단 간극 없애기 : vam */
@@ -339,7 +330,7 @@
         보이는 화면이 그 기준이된다!
       
       */
-      .iamfixed{
+      .iamfixed {
         position: fixed;
         top: 200px;
         right: 200px;
@@ -350,18 +341,17 @@
         border-radius: 50%;
         padding: 15px;
         font-size: 30px;
-
       }
 
       /* 스티키를 포함하는 부모박스 */
-      .wrap{
+      .wrap {
         padding: 15px;
         margin-top: 300px;
         border: 5px dotted blue;
       }
 
       /* 스티키 적용구간 부모박스 */
-      .wrap-stk{
+      .wrap-stk {
         padding: 15px;
         border: 5px dotted red;
         height: 700px;
@@ -369,11 +359,10 @@
       }
 
       /* 스티키 박스 */
-      .stkbx{
+      .stkbx {
         position: sticky;
         /* 보이는 화면 상단으로 부터 100px위치 */
         top: 100px;
-
 
         text-align: center;
         font-size: 30px;
@@ -382,70 +371,50 @@
         border: 5px dotted blue;
         z-index: 9999;
       }
-
     </style>
   </head>
   <body>
-
     <div class="bx" id="r1">r1</div>
     <div class="bx" id="s1">s1</div>
-
 
     <!-- 스티키 제목박스-->
     <h1 class="tit">Sticky 포지션</h1>
 
     <!-- 스티키를 포함하는 박스 -->
-     <div class="wrap">
+    <div class="wrap">
       <!--  스티키 구간적용박스 -->
-        <div class="wrap-stk">
-          <!-- 스티키 포지션 박스 -->
-           <div class="stkbx">
-            나는 sticky다! 사라지지 않아!
-           </div>
-        </div>
-     </div>
-
-    <!-- 젠틀픽스드 박스 -->
-    <div class="bx" id="f1">
-      나는 젠틀픽스드다!!!
+      <div class="wrap-stk">
+        <!-- 스티키 포지션 박스 -->
+        <div class="stkbx">나는 sticky다! 사라지지 않아!</div>
+      </div>
     </div>
 
+    <!-- 젠틀픽스드 박스 -->
+    <div class="bx" id="f1">나는 젠틀픽스드다!!!</div>
+
     <!-- 포스터보기 fixed적용박스 -->
-     <div class="fixed-poster">
-      <img src="./images/ab0.jpg" alt="포스터">
+    <div class="fixed-poster">
+      <img src="./images/ab0.jpg" alt="포스터" />
       <span>포스터보기</span>
-     </div>
+    </div>
 
     <!-- 첫번째 앱솔루트 박스 -->
     <div class="bx" id="a1">a1</div>
     <div class="bx" id="r2">r2</div>
-
 
     <div class="bx" id="s2">s2</div>
     <!-- 두번째 앱솔루트 박스 -->
     <div class="bx" id="a2">a2</div>
 
     <!-- 앱솔루트 : 판타롱스타킹! -->
-    <div
-      class="a5"
-      title="앱솔루트 판타롱스타킹~!"
-    >
-      <img
-        src="./images/ab2.jpg"
-        alt="타노스"
-      />
+    <div class="a5" title="앱솔루트 판타롱스타킹~!">
+      <img src="./images/ab2.jpg" alt="타노스" />
     </div>
 
     <!-- 앱솔루트끼리는 서로 겹친다! -->
     <div class="absimg">
-      <img
-        src="./images/ab3.jpg"
-        alt="토르"
-      />
-      <img
-        src="./images/ab4.jpg"
-        alt="닥스"
-      />
+      <img src="./images/ab3.jpg" alt="토르" />
+      <img src="./images/ab4.jpg" alt="닥스" />
     </div>
 
     <!-- 부모를 찾는 앱솔루트! -->
@@ -458,29 +427,16 @@
           <div class="bx2 s8">
             s8
             <!-- 박스내부 앱솔루트 -->
-            <div
-              class="abs a3"
-              title="나는 젠틀앱솔루트다!"
-            >
-              a3
-            </div>
+            <div class="abs a3" title="나는 젠틀앱솔루트다!">a3</div>
 
-            <div
-              class="abs a4"
-              title="나는 부모찾아 올라간다!"
-            >
-              a4
-            </div>
+            <div class="abs a4" title="나는 부모찾아 올라간다!">a4</div>
 
-            <span
-              class="spabs"
-              title="자동블록전환!"
-            >
+            <span class="spabs" title="자동블록전환!">
               나는 span앱솔루트다!
             </span>
 
             <!-- 부모가 많은 요소를 fixed처리하기 -->
-             <span class="iamfixed">👩‍🔧개발자👨‍🔧</span>
+            <span class="iamfixed">👩‍🔧개발자👨‍🔧</span>
           </div>
         </div>
       </div>
