@@ -40,6 +40,36 @@
         /* 보더박스:보더,패딩포함 */
         box-sizing: border-box;
       }
+
+      /* 원모양 박스 만들기 */
+      .원이야{
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* 부모는? 보이는 상단화면 */
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        /* 배경 공통 */
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* 보더박스 */
+        box-sizing: border-box;
+      }
+
+      /* 원모양 개별셋팅 */
+      .원이야:nth-child(1){
+        right: 400px;
+        background-image: url(./images/apt1.jpg);
+      }
+      .원이야:nth-child(2){
+        right: 200px;
+        background-image: url(./images/apt2.jpg);
+      }
+      .원이야:nth-child(3){
+        background-image: url(./images/apt3.jpg);
+        background-position: center;
+      }
     </style>
 
     <!-- 자바스크립트 코딩구역! -->
@@ -205,5 +235,12 @@
       <!-- 김비서에 전달된 요청찍기 -->
       <b class="요청"></b>
     </p>
+
+    <!-- 원모양 박스 -->
+    <div class="박스야">
+      <div class="원이야"></div>
+      <div class="원이야"></div>
+      <div class="원이야"></div>
+    </div>
   </body>
 </html>
