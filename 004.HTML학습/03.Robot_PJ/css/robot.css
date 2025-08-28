@@ -62,4 +62,23 @@ body * {
   right: 50px;
   background-image: url(../images/e2.jpg);
 }
-/************************* 3. 하단영역 *************************/
+
+/* 코 */
+.nose {
+  top: 95px;
+  left: 103px;
+  width: 45px;
+  height: 70px;
+  border-radius: 47px;
+  background: url(../images/nose.jpg) no-repeat 0 / 106% 100%;
+}
+
+/* 입 */
+.mouth {
+  bottom: 8px;
+  left: 63px;
+  width: 127px;
+  height: 65px;
+  background: url(../images/mouth.png) no-repeat center / cover;
+}
+/************************* 4. 하단영역 *************************/
