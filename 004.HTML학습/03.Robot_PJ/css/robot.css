@@ -65,20 +65,59 @@ body * {
 
 /* 코 */
 .nose {
-  top: 95px;
-  left: 103px;
-  width: 45px;
-  height: 70px;
-  border-radius: 47px;
+  top: 98px;
+  left: 102px;
+  width: 46px;
+  height: 67px;
+  border-radius: 20px;
   background: url(../images/nose.jpg) no-repeat 0 / 106% 100%;
 }
 
 /* 입 */
 .mouth {
-  bottom: 8px;
-  left: 63px;
-  width: 127px;
-  height: 65px;
+  bottom: 21px;
+  left: 73px;
+  width: 105px;
+  height: 46px;
   background: url(../images/mouth.png) no-repeat center / cover;
 }
+
+/* 귀공통 */
+.ear{
+  top: 80px;
+  width: 60px;
+  height: 80px;
+}
+
+/* 왼귀 */
+.ear1{
+  left: -60px;
+  border-radius: 50% 0 0 50%;
+}
+
+/* 오른귀 */
+.ear2{
+  right: -60px;
+  border-radius: 0 50% 50% 0;
+}
+
+/* 로봇몸통 */
+.robot-body{
+  position: relative;
+  /* 부모자격 */
+  width: 180px;
+  height: 320px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* 목 */
+/* 왼팔 */
+/* 오른팔 */
+/* 왼어깨 */
+/* 오른어깨 */
+/* 왼다리 */
+/* 오른다리 */
+/* TV */
+
 /************************* 4. 하단영역 *************************/
