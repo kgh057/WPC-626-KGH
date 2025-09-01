@@ -44,7 +44,7 @@ body {
   width: 400px;
   height: 600px;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: #fffcc6;
 }
 
 /* 문프레임 */
@@ -70,7 +70,6 @@ body {
   perspective: 1000px;
 
   perspective-origin: 50% 50%;
-  /* -> 기본값으로 가운데 */
   /*********************************************** 
         [ 뷰포인트(관찰자위치) 변경옵션 ]
         perpective-origin : 가로 세로;
@@ -81,41 +80,42 @@ body {
     ***********************************************/
 
   /* 애니메이션 호출 */
-  animation: bg-ani 10s ease-in-out infinite alternate;
+  animation: bg-ani 5s ease-in-out infinite alternate;
 }
 
-/* 문프래임 배경 애니 키프레임 */
+/* 문프레임 배경 애니 키프레임 */
 @keyframes bg-ani {
   to {
-    background-size: contain auto 120%;
+    background-size: auto 120%;
   }
 }
 
-/* 문 */
+/* 문짝 */
 .door {
   position: relative;
   /* 부모자격 - 문고리 */
   width: 350px;
   height: 580px;
-  background-color: rgb(255, 252, 198);
+  background-color: #ffffff;
 
-  /* 문 y축 회전 */
+  /* y축 회전 */
   rotate: y 0deg;
-  /* 축 변경 : 왼쪽 */
+  /* 축변경 : 왼쪽 */
   transform-origin: left;
 
   /* 애니메이션 호출 - animation: 이시이지반방마 */
-  animation:
-    /* (1) 문 처음 열기 1초간 처음과 끝 천천히 한번만 실행 끝상태 유지*/ first-open-ani
-      1s ease-in-out forwards,
-    /* (2) 문 여닫기 애니 2초간 처음과 끝 천천히 1초 기다림 영원히 반대방향애니 셋팅 */
+  animation: 
+    /* (1) 문 처음열기 1초간 처음과끝 천천히 한번만실행 끝상태유지 */ first-open-ani
+      1s ease-in-out 1s forwards,
+    /* (2) 문 여닫기애니 2초간 처음과끝 천천히 1초기다림 영원히 반대방향애니 셋팅 */
       door-ani 2s ease-in-out 2s infinite alternate;
 
   /* 애니메이션 플레이상태 설정하여 멈추기
-    anr-play-state-state
-    (1) 재생 멈춤값 : running;
-    (2) 멈춤 상태값 : paused */
+        animation-play-state: 
+        (1) 재생 상태값 : running
+        (2) 멈춤 상태값 : paused */
   animation-play-state: paused;
+  z-index: 2;
 }
 
 /* 문의 최상위 부모에 마우스 오버시 애니메이션 재생하기 */
@@ -143,18 +143,18 @@ body {
 .handle {
   position: absolute;
   top: 50%;
-  /* y축 중앙이동 */
+  /* y축중앙이동 */
   translate: 0 -50%;
   right: 10px;
   /* 부모는? .door */
   width: 50px;
   height: 50px;
-  background-color: rgb(255, 255, 255);
+  background-color: #fffcc6;
   border-radius: 50%;
 }
 
 /* 엘사박스 */
-.eala-box {
+.elsa-box {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -170,15 +170,14 @@ body {
   position: absolute;
   right: -201px;
   bottom: 0;
-
-  /* 부모는 .elsa-box */
-  rotate: 0deg; /* -6deg; */
+  /* 부모는? .elsa-box */
+  rotate: 0deg;
   transform-origin: bottom;
 
   /* 애니메이션 호출 */
   animation: elsa-ani 1s ease-in-out 1s infinite alternate;
-  /* 처음에 멈춰있음 */
 
+  /* 처음에 멈춰있음 */
   animation-play-state: paused;
 }
 
