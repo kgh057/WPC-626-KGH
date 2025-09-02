@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>플렉스 디스플레이</title>
     <style>
       /*
@@ -84,20 +81,21 @@
 
       /* 전체 랩핑박스 */
       .wrap {
-        
+        height: 100vh;
         /* 보이는 화면채우기 */
+        /* 가로는 auto로 끝까지 가니까 안써도 됨 */
       }
       /* 등분할 flex적용박스 */
       .flex-box {
         /* 플렉스 디스플레이 : df */
-        
+        display: flex;
         /* 자식요소의 기준높이 설정 */
-        
+        height: 100%;
       }
 
       .flex-box li {
         /* 자식요소 플렉스 설정 : fx1 */
-        
+        flex: 1;
         /* 가로,세로 크기 설정 불필요!
           가로는 등분할, 세로는 부모크기 채움!
 
@@ -121,27 +119,22 @@
 
       /* 배경분할 박스 순서 바꾸기
       flex하위 order속성으로! */
-      
+
       /* 등분할 박스 li 개별셋팅 */
       .flex-box li:nth-child(1) {
-        background: url(./images/m01_bg.jpg)
-          no-repeat center/cover;
+        background: url(./images/m01_bg.jpg) no-repeat center/cover;
       }
       .flex-box li:nth-child(2) {
-        background: url(./images/m02_bg.jpg)
-          no-repeat center/cover;
+        background: url(./images/m02_bg.jpg) no-repeat center/cover;
       }
       .flex-box li:nth-child(3) {
-        background: url(./images/m03_bg.jpg)
-          no-repeat center/cover;
+        background: url(./images/m03_bg.jpg) no-repeat center/cover;
       }
       .flex-box li:nth-child(4) {
-        background: url(./images/m04_bg.jpg)
-          no-repeat center/cover;
+        background: url(./images/m04_bg.jpg) no-repeat center/cover;
       }
       .flex-box li:nth-child(5) {
-        background: url(./images/m05_bg.jpg)
-          no-repeat center/cover;
+        background: url(./images/m05_bg.jpg) no-repeat center/cover;
       }
 
       /* 타이틀 공통 */
@@ -173,7 +166,7 @@
       /* 타이틀1 */
       .t1 {
         /* 플렉스 디스플레이 */
-        
+
         /* 
         [ justify-content 속성 ]
 
@@ -192,7 +185,6 @@
             아이템요소 양쪽과 사이간격 일정
         */
 
-        
         /* 
         [ align-items 속성 ]
 
@@ -214,32 +206,28 @@
       .t2 {
         top: 250px;
         /* 플렉스 박스 : df */
-        
+
         /* 진행방향정렬 : jcspb */
-        
+
         /* 진행방향수직정렬 : aib */
-        
+
         /* baseline은 글자 하단라인을 기준한다! */
       }
       /* 줄간격 조정 */
       .t2 li:nth-child(2) {
-        
       }
       .t2 li:nth-child(4) {
-        
       }
 
       /* 타이틀 3 */
       .t3 {
         top: 400px;
         /* 플렉스박스 */
-        
+
         /* 진행방향수직정렬 : aic */
-        
       }
       /* 4번째 li부터 오른쪽 끝으로 보내기 */
       .t3 li:nth-child(4) {
-        
         /* 선택요소의 떨어뜨리려는
         방향으로 마진을 auto처리하면
         flex박스 오른쪽 끝으로 이동시켜준다! */
@@ -254,9 +242,9 @@
         height: 500px;
 
         /* 플렉스 박스 */
-        
+
         /* 플렉스 진행방향 : fxdc */
-        
+
         /* 
             [ flex-direction 속성 ]
             - 진행방향과 순서를 정함
@@ -268,13 +256,12 @@
         */
 
         /* 진행방향수직정렬 : aic */
-        
+
         /* 진행방향정렬은? jcc */
         /* justify-content: center; */
       }
       /* 수직방향일때 3번째 li부터 끝으로 보내기 */
       .t4 li:nth-child(3) {
-        
         /* 윗쪽마진 auto면 끝으로 감! */
       }
       /* 타이틀박스 5 */
@@ -284,7 +271,6 @@
         height: 80px;
 
         /* 플렉스 박스 */
-        
       }
       /* 자식 플렉스 박스의
     flex-shrink:1 이 기본값임!
@@ -292,7 +278,6 @@
     강제로 줄어든 박스의 크기를
     유지해야할 경우 변경해야한다! */
       .t5 li {
-        
         /* 
         [flex-shrink 속성 ]
         부모박스가 줄어들때 같이 자동으로 줄어들래?
@@ -306,15 +291,15 @@
         height: 250px;
 
         /* 플렉스박스 */
-        
+
         /* 플렉스 랩핑박스
         -> 내용이 넘치면 줄바꿈함 */
-        
+
         /* 진행방향 정렬 중앙: jcc */
-        
+
         /* 진행방향수직정렬 여러줄
         align-content속성! */
-        
+
         /* 
         [ align-content 속성 ]
 
@@ -337,7 +322,6 @@
       /* 마진으로 한줄에 오는
     글자를 조정하기 */
       .t6 li {
-        
       }
 
       /* 마진없이 플렉스 랩핑박스 줄바꿈하기! */
@@ -352,28 +336,26 @@
         /* 트랜스폼 트랜스레이트 해제 */
         translate: none;
         /* 플렉스박스 */
-        
+
         /* 플렉스 랩핑박스
         -> 자식요소에 flex-shrink:0 
         하지 않아도 자동처리됨! */
-        
+
         /* 진행방향 정렬 균등간격 : jcspe */
-        
+
         /* 진행방향수직정렬(여러줄) 중앙 : acc */
-        
       }
 
       /* 줄바꿈 클래스 셋팅 */
-      .t7 li.brk{
+      .t7 li.brk {
         /* width: 100%; */
-        
+
         /* flex-basis는 width와 동일하지만
         flex에서만 사용가능한 가로크기속성 */
 
         /* 기존디자인 변경 */
-        
+
         /* 사이간격조정 */
-        
       }
     </style>
   </head>
