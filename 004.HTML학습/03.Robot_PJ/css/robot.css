@@ -27,8 +27,9 @@ body * {
   position: relative;
   /* -> 부모자격 - 자식앱솔루트의 부모! */
 
-  width: 250px;
-  height: 250px;
+  width: 215px;
+  height: 235px;
+  border-radius: 30% 30% 50% 50%;
   /* 무대중앙에 마.영.오 */
   margin: 0 auto;
 }
@@ -54,21 +55,28 @@ body * {
 
 /* 왼눈 */
 .eye1 {
-  left: 50px;
+  left: 50%;
+  translate: -125%;
   background-image: url(../images/e1.jpg);
 }
+
 /* 오른눈 */
 .eye2 {
-  right: 50px;
+  right: 50%;
+  translate: 125%;
   background-image: url(../images/e2.jpg);
 }
 
 /* 코 */
 .nose {
-  top: 98px;
-  left: 102px;
+  top: 95px;
+
+  left: 50%;
+  translate: -50%;
+  /* 가로중앙 셋팅 */
+
   width: 46px;
-  height: 67px;
+  height: 60px;
   border-radius: 20px;
   background: url(../images/nose.jpg) no-repeat 0 / 106% 100%;
 }
@@ -76,33 +84,37 @@ body * {
 /* 입 */
 .mouth {
   bottom: 21px;
-  left: 73px;
+
+  left: 50%;
+  translate: -50%;
+  /* 가로중앙 셋팅 */
+
   width: 105px;
   height: 46px;
   background: url(../images/mouth.png) no-repeat center / cover;
 }
 
-/* 귀공통 */
-.ear{
+/* 귀 공통 */
+.ear {
   top: 80px;
   width: 60px;
   height: 80px;
 }
 
 /* 왼귀 */
-.ear1{
+.ear1 {
   left: -60px;
   border-radius: 50% 0 0 50%;
 }
 
 /* 오른귀 */
-.ear2{
+.ear2 {
   right: -60px;
   border-radius: 0 50% 50% 0;
 }
 
 /* 로봇몸통 */
-.robot-body{
+.robot-body {
   position: relative;
   /* 부모자격 */
   width: 180px;
@@ -111,13 +123,113 @@ body * {
   margin-top: 50px;
 }
 
+/* 몸통 직계자식요소 모두 앱솔루트 */
+.robot-body > div {
+  position: absolute;
+}
+
 /* 목 */
+.neck {
+  top: -50px;
+  left: 50%;
+  translate: -50%;
+  width: 50px;
+  height: 50px;
+}
+
+/* 팔 공통 */
+.arm {
+  top: 0;
+  width: 50px;
+  height: 210px;
+  border-radius: 20px;
+}
+
 /* 왼팔 */
+.arm1 {
+  left: -50px;
+}
+
 /* 오른팔 */
+.arm2 {
+  right: -50px;
+}
+
+/* 팔 하단 span */
+.arm span {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  border-radius: 10px;
+}
+
+/* 로봇손 가상요소 */
+.arm span::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -42%;
+  width: 66px;
+  height: 107px;
+  background: url(../images/hand_left.png) no-repeat 0/100%;
+}
+
+/* 어깨 공통 */
+.shdr {
+  top: -10px;
+  width: 80px;
+  height: 80px;
+}
+
 /* 왼어깨 */
+.shdr1 {
+  left: -65px;
+  border-radius: 55px 35px 20px 20px;
+}
+
 /* 오른어깨 */
+.shdr2 {
+  right: -65px;
+  border-radius: 35px 55px 20px 20px;
+}
+
+/* 다리 공통 */
+.leg {
+  top: 100%;
+  width: 60px;
+  height: 220px;
+}
+
 /* 왼다리 */
+.leg1 {
+  left: 0;
+}
+
 /* 오른다리 */
+.leg2 {
+  right: 0;
+}
+
+/* 다리 하단 span */
+.leg span {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+}
+
 /* TV */
+.tv {
+  top: 20px;
+  left: 50%;
+  translate: -50%;
+  width: 120px;
+  height: 80px;
+  background: url(../images/tv.jpg) no-repeat 0/100%;
+}
 
 /************************* 4. 하단영역 *************************/
