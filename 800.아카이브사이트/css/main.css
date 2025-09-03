@@ -34,27 +34,32 @@ body {
 
 /* float해제설정 */
 #gnb {
+  /* 플렉스 박스 */
+  display: flex;
+  /* 진행방향 정렬 : 사이간격일정 */
+  justify-content: space-between;
+
   max-width: 700px;
   margin: 0 auto;
   /* outline: 1px solid red; */
 }
-#gnb::after {
+/* #gnb::after {
   content: "";
   display: block;
   clear: both;
-}
+} */
 
 #gnb li {
-  float: left;
+  /* float: left; -> 안씀 */
   /* 높이값만큼 줄간격셋팅 */
   line-height: 93px;
 }
 
-/* 두번째 li부터 끝까지 왼쪽마진 */
-#gnb li + li {
-  margin-left: 25.6%;
+/* 두번째 li부터 끝까지 왼쪽마진 -> 플렉스 하면 불필요! */
+/* #gnb li + li { */
+  /* margin-left: 25.6%; */
   /* 마진의 %값의 기준은 부모박스의 크기이다! */
-}
+/* } */
 
 /* 깃허브 박스 */
 .git-box {
@@ -174,6 +179,9 @@ body {
 
 /********** 2-2-2. 링크박스 **********/
 .link-box {
+  /* 플렉스 박스 */
+  display: flex;
+
   /* 가로크기는 레이아웃은 아니지만 12그리드 크기를 기준해서 준다! */
   width: calc(100% / 12 * 10);
   /* 마영오! - 블록요소 가로중앙 */
@@ -191,7 +199,7 @@ body {
 /* 플롯팅 설정하기 */
 .link-box > div {
   /* 옆으로 흐르게 */
-  float: left;
+  /* float: left; -> 안씀 */
 
   /* 절반 크기 셋팅 */
   width: 50%;
