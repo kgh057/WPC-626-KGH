@@ -19,7 +19,7 @@ body {
   translate: -50% -50%;
   width: 300px;
   height: 300px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 
   /* 입체가 잘보이도록 살짝 회전 x축 10도, y축 30도
   transform: rotateX(x축각도) rotateY(y축각도) */
@@ -47,7 +47,7 @@ body {
   /* 반투명 */
   opacity: 0.8;
 
-  border: 2px dashed blue;
+  border: 1px solid gray;
   /* 보더박스는 패딩,보더 내부포함 */
   box-sizing: border-box;
 }
@@ -95,8 +95,34 @@ body {
 .cube span:nth-child(5) {
   /* Y축 회전 + 화면방향(z축)으로 이동하기
   -> 적용순서에 따라 결과가 달라진다! 회전부터 해라! */
-  transform: rotateY(-90deg) translateZ(150px) ;
+  transform: rotateX(90deg) translateZ(150px) ;
 
   /* 배경이미지 */
-  background: url(../image/.jpg) no-repeat center/cover;
+  background: url(../image/Ghibli-main4.jpg) no-repeat center/cover;
 }
+
+/* 다섯번째 큐브 아래쪽면 */
+.cube span:nth-child(6) {
+  /* Y축 회전 + 화면방향(z축)으로 이동하기
+  -> 적용순서에 따라 결과가 달라진다! 회전부터 해라! */
+  transform: rotateX(-90deg) translateZ(150px) ;
+
+  /* 배경이미지 */
+  background: url(../image/Ghibli12.jpg) no-repeat center/cover;
+}
+
+/* 애니적용 클래스 - animation:이시이지반방마 */
+.rotate-cube{
+  animation: cube-ani 10s infinite linear;
+}
+
+/* 큐브 회전 키프레임 */
+@keyframes cube{
+  to{
+    transform: rotateX(370deg) rotateY(-330deg)
+    /* X축은 양의 방향, y축은 음의 방향으로 회전
+    -> 본인이 정하는 것 */
+  }
+}
+
+/* [ 같은 위치까지 360도 회전하는 계산법 ] */
