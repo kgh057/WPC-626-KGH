@@ -9,6 +9,14 @@ body {
 body {
   background-image: linear-gradient(to bottom, #c2fff2, #d1f6ff);
   height: 100vh;
+
+  /* 기존 기본커서 대신 이미지 나오게 하기
+  cursor: url(이미지경로) 핫스팟, auto;
+  -> 핫스팟은 커서 포인트 위치 지정
+  아무것도 안주면 0 0 설정됨
+  설정된 값이 커서 포인터 위치값이 됨
+  cursor: url(../images/cursor.png) 10 10, auto; */
+  cursor: url(../images/cursor.png), auto;
 }
 
 /* 큐브박스 */
