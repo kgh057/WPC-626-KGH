@@ -26,28 +26,36 @@ function 점수보여줘() {
   // querySelector() 메서드는 선택자(클래스,아이디,태그) 모두 가능함! 하나만 선택하여 가져온다!
   // querySelectorAll() 메서드는 선택자 모두 가능하며, 여러개를 선택하여 가져온다! -> 순번필요 -> item(순번) 사용!
 
+  // 2-3. 칭찬스티커 박스
+  var 칭찬스티커 = document.querySelector(".jshow");
+
   console.log("내점수:", 내점수.value, "출력박스:", 출력박스);
 
   //   3. 점수에 따른 if문 처리하기
   if(내점수.value >= 90) { // 90점 이상
     출력박스.innerHTML = "매우 잘함";
-    출력박스.style.color = "blue";     
+    출력박스.style.color = "blue";
+    칭찬스티커.style.backgroundPosition = "0% 99%";
   }
   else if(내점수.value >= 80) { // 80점 이상
     출력박스.innerHTML = "잘함";
-    출력박스.style.color = "green";    
+    출력박스.style.color = "green";
+    칭찬스티커.style.backgroundPosition = "100% 0%";   
   }
   else if(내점수.value >= 70) { // 70점 이상
     출력박스.innerHTML = "보통";
-    출력박스.style.color = "yellow";    
+    출력박스.style.color = "yellow";
+    칭찬스티커.style.backgroundPosition = "0% 0%";
   }
   else if(내점수.value >= 60) { // 60점 이상
     출력박스.innerHTML = "노력요함";
-    출력박스.style.color = "purple";    
+    출력박스.style.color = "purple";
+    칭찬스티커.style.backgroundPosition = "50% 0%";    
   }
   else { //60점 이하
     출력박스.innerHTML = "재시험";
-    출력박스.style.color = "red";    
+    출력박스.style.color = "red";
+    칭찬스티커.style.backgroundPosition = "0% 50%";   
   }
 
 } //점수보여줘 함수 ////
