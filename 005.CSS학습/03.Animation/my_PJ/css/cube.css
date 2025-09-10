@@ -16,7 +16,7 @@ body {
   아무것도 안주면 0 0 설정됨
   설정된 값이 커서 포인터 위치값이 됨
   cursor: url(../images/cursor.png) 10 10, auto; */
-  cursor: url(../images/cursor.png), auto;
+  cursor: url(../image/cursor2.png), auto;
 }
 
 /* 큐브박스 */
