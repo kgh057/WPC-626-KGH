@@ -32,7 +32,7 @@ body {
 /* 임시표시타이틀 */
 .temp-tit {
   position: absolute;
-  font-size: 3vmax;
+  font-size: min(3mvax,43px);
   color: #ccc;
   width: 100%;
   text-align: center;
