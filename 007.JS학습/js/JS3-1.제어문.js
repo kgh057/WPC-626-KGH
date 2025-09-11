@@ -31,33 +31,94 @@ function 점수보여줘() {
 
   console.log("내점수:", 내점수.value, "출력박스:", 출력박스);
 
-  //   3. 점수에 따른 if문 처리하기
-  if(내점수.value >= 90) { // 90점 이상
+  // [ 입력값 유효성 검사시 공통기능함수 ]
+  const 검사후처리해 = (경고문) => {
+    // 경고문 - 경고창에 띄울 메시지
+
+    // 경고창 띄우기
+    alert(경고문);
+
+    // 입력값 지우기
+    내점수.value = "";
+
+    // 입력창에 포커스주기
+    // focus() 메서드는 입력창에 포커스주는 명령어
+    내점수.focus();
+
+    // 칭찬스티커값 초기화
+    칭찬스티커.style.backgroundPosition = "-50% 0%";
+  }; // 검사후처리해 함수 //////
+
+  // 2.5. 입력값 유효성 검사하기 //////
+  // 입력값이 없으면 경고 후 함수 종료
+  if (내점수.value === "") {
+    alert("점수를 입력해줘!");
+
+    // 리턴문은 함수종료!(여기서 함수를 나간다!)
+    return;
+  } /// if문 //////
+  // 숫자가 아니면 경고 후 함수종료!
+  // isNaN(값) : 값이 숫자가 아니면 true, 숫자면 false
+  else if (isNaN(내점수.value)) {
+    // 경고창 띄우기
+    alert("숫자만 입력해줘!");
+
+    // 입력값 지우기
+    내점수.value = "";
+
+    // 입력창에 포커스주기
+    // focus() 메서드는 입력창에 포커스주는 명령어
+    내점수.focus();
+
+    // 리턴문은 함수종료!(여기서 함수를 나간다!)
+    return;
+  } /// else if문 //////
+  // 0~100 사이가 아니면 경고 후 함수종료!
+  else if (내점수.value < 0 || 내점수.value > 100) {
+    // 경고창 띄우기
+    alert("0~100 사이의 점수만 입력해줘!");
+
+    // 입력값 지우기
+    내점수.value = "";
+
+    // 입력창에 포커스주기
+    // focus() 메서드는 입력창에 포커스주는 명령어
+    내점수.focus();
+
+    // 칭찬스티커값 초기화
+    칭찬스티커.style.backgroundPosition = "-50% 0%";
+
+    // 리턴문은 함수종료!(여기서 함수를 나간다!)
+    return;
+  } /// else if문 /////
+
+  // 3. 점수에 따른 if문 처리하기
+  if (내점수.value >= 90) {
+    // 90점 이상
     출력박스.innerHTML = "매우 잘함";
     출력박스.style.color = "blue";
     칭찬스티커.style.backgroundPosition = "0% 99%";
-  }
-  else if(내점수.value >= 80) { // 80점 이상
+  } else if (내점수.value >= 80) {
+    // 80점 이상
     출력박스.innerHTML = "잘함";
     출력박스.style.color = "green";
-    칭찬스티커.style.backgroundPosition = "100% 0%";   
-  }
-  else if(내점수.value >= 70) { // 70점 이상
+    칭찬스티커.style.backgroundPosition = "100% 0%";
+  } else if (내점수.value >= 70) {
+    // 70점 이상
     출력박스.innerHTML = "보통";
     출력박스.style.color = "yellow";
     칭찬스티커.style.backgroundPosition = "0% 0%";
-  }
-  else if(내점수.value >= 60) { // 60점 이상
+  } else if (내점수.value >= 60) {
+    // 60점 이상
     출력박스.innerHTML = "노력요함";
     출력박스.style.color = "purple";
-    칭찬스티커.style.backgroundPosition = "50% 0%";    
-  }
-  else { //60점 이하
+    칭찬스티커.style.backgroundPosition = "50% 0%";
+  } else {
+    //60점 이하
     출력박스.innerHTML = "재시험";
     출력박스.style.color = "red";
-    칭찬스티커.style.backgroundPosition = "0% 50%";   
+    칭찬스티커.style.backgroundPosition = "0% 50%";
   }
-
 } //점수보여줘 함수 ////
 
 /*************************************** 
