@@ -15,10 +15,10 @@ body {
 
 /* 공사중 표시 : 구현시 박스표시 */
 /* *별표시는 모든요소를 선택함 */
-body * {
-  /* 아웃라인은 아무런 영향이 없음 */
-  outline: 2px dashed #ccc;
-}
+/* body * { */
+/* 아웃라인은 아무런 영향이 없음 */
+/* outline: 2px dashed #ccc; */
+/* } */
 
 /*************** 1. 상단영역 ***************/
 .top-area {
@@ -29,7 +29,14 @@ body * {
 .main-area {
   position: relative;
   /* 부모자격 - 자식요소들 */
-  height: 788px;
+
+  /* height: 788px; */
+  /* 최대 높이값 지정 */
+  max-height: 788px;
+
+  /* 높이값을 주지 않고 비율설정을 해서 비율박스 생성 */
+  aspect-ratio: 1200/788;
+
   /* 극장배경 이미지 넣기 */
   background: url(../images/bg.jpg) no-repeat center top/cover;
 }
@@ -39,7 +46,7 @@ body * {
   position: absolute;
   top: 17.3%;
   left: 21.4%;
-  width: 58.4%;
+  width: 58.5%;
   height: 50.3%;
   background-color: #000000;
 }
@@ -49,6 +56,110 @@ body * {
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* 2-2. 포스터 메뉴박스 */
+.poster-menu-box {
+  position: absolute;
+  bottom: 5%;
+  width: 66%;
+  /* 가로방향중앙 */
+  left: 50%;
+  translate: -50%;
+}
+
+/* 포스터 메뉴박스 ul */
+.poster-menu-box ul {
+  display: flex;
+  /* justify-content: center; -> 있으나 없으나 같음 */
+  gap: 1.5%;
+
+  /* 자식 li 압체를 위한 원근설정 */
+  perspective: 70vh;
+  /* -> px로 하면 얼마나 줘야하는지 정확한 값을 넣어야하는데 보이는 화면에 %로 주면 편함 */
+}
+/* 포스터 이미지 */
+.poster-menu-box img {
+  width: 100%;
+  aspect-ratio: 99/140;
+}
+
+/* 영화포스터 리스트 li */
+.poster-menu-box li {
+  position: relative;
+  /* 영화정보박스의 부모 */
+
+  /* 넘치는 자식 숨기기 */
+  overflow: hidden;
+
+  /* x축 회전, 기준축 하단
+  -> 단, 원근설정은 부모박스에게 */
+  rotate: x 40deg;
+  transform-origin: bottom;
+
+  /* 트랜지션 */
+  transition: rotate 0.3s ease-out; /* -> rotate만 */
+  /* transition: .3s ease-out; -> all .3s ease-out; */
+}
+
+/* li에 오버시 변경 */
+.poster-menu-box li:hover {
+  /* 일어남 */
+  rotate: x 0deg;
+  /* 외곽선 */
+  outline: 1px solid aqua;
+  /* z-index 위 */
+  z-index: 1;
+}
+
+/* 영화정보박스 */
+.movie-info {
+  position: absolute;
+  /* 아래쪽에 내려가있음 */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* 반투명 검정배경 */
+  background-color: rgb(0 0 0 / 0.7);
+  text-align: center;
+
+  /* 플렉스 박스 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+
+  /* 웹폰트체 적용 */
+  font-family: "Cute Font", cursive;
+
+  /* 글자 크기 */
+  font-size: min(1.1vw, 16px);
+  /* font-size: 1vw; -> 최대크기를 안주면 화면크기만큼 계속 커짐 */
+
+  /* 줄바꿈 방지 */
+  white-space: nowrap;
+
+  /* 트랜지션  - li박스 x축 0.3초 회전 후 작동*/
+  transition: top 0.3s ease-out 0.3s;
+}
+
+/* 영화정보박스 li : hover */
+.poster-menu-box li:hover .movie-info {
+  top: 0;
+}
+
+/* 영화정보 중 타이틀 */
+.movie-info h2 {
+  color: aqua;
+  font-size: min(1.4vw, 18px);
+}
+
+/* 기본 두꺼운체 해제 */
+.movie-info h2,
+.movie-info h3,
+.movie-info h4 {
+  font-weight: normal;
 }
 
 /*************** 3. 하단영역 ***************/
