@@ -125,16 +125,16 @@ body {
 }
 
 /* 애니적용 클래스요소에 오버시 애니 멈춤 */
-.rotate-cube:hover{
+.rotate-cube:hover {
   animation-play-state: paused;
 }
 
 /* 큐브 회전 키프레임 */
-@keyframes cube-ani{
-    to{
-        transform: rotateX(370deg) rotateY(-330deg);
-        /* x축은 양의방향, y축은 음의 방향으로 회전 */
-    }
+@keyframes cube-ani {
+  to {
+    transform: rotateX(370deg) rotateY(-330deg);
+    /* x축은 양의방향, y축은 음의 방향으로 회전 */
+  }
 }
 
 /* [ 같은위치까지 360도 회전하는 계산법 ]
@@ -148,3 +148,34 @@ body {
     양의 방향 360도+30도=390도
     음의 방향 -360도+30도=-330도
 */
+
+/* 큐브의 바닥 그림자박스 */
+.shadow {
+  position: absolute;
+  bottom: 0; /* 바닥에 위치 */
+  left: 50%;
+  translate: -50% 0;
+  width: var(--cube-size);
+  height: var(--cube-size);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 20%;
+  transform: rotateX(90deg) scale(1.2, 0.6); /* 납작하게 눌림 */
+  filter: blur(25px);
+  animation: shadow-ani 3s linear infinite;
+
+  /* 사이즈 변경 애니를 위해 트랜지션넣기 */
+  transition: var(--cube-transition);
+}
+
+/* 큐브 바닥 그림자 키프레임 */
+@keyframes shadow-ani {
+  0% {
+    transform: rotateX(90deg) scale(1.5, 0.6) rotateZ(0);
+  }
+  50% {
+    transform: rotateX(90deg) scale(1.8, 0.4) rotateZ(180deg);
+  }
+  100% {
+    transform: rotateX(90deg) scale(1.5, 0.6) rotateZ(360deg);
+  }
+}
