@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="./images/favicon.ico" />
     <!-- 메인 CSS -->
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- 메인 JS  -->
+    <script src="./js/main.js" defer></script>
   </head>
   <body>
     <!-- 1. 상단영역 -->
@@ -20,7 +22,15 @@
           <section class="logo-box">
             <h1 class="logo">
               <a href="#">
-                <img src="./images/new_logo.png" alt="로고" />
+                <!-- <img src="./images/new_logo.png" alt="로고" /> -->
+                <div class="cube-logo">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
               </a>
             </h1>
           </section>
@@ -28,8 +38,8 @@
           <section class="menu-box">
             <!-- 메뉴박스하위 메뉴그룹박스 -->
             <div class="menu-group">
-              <!-- 1-2-1. 버튼메뉴 -->
-              <nav class="button-menu">
+              <!-- 1-2-1. 탑메뉴 -->
+              <nav class="top-menu">
                 <ul>
                   <li><a href="">로그인</a></li>
                   <li><a href="">회원가입</a></li>
@@ -159,11 +169,23 @@
           <h2 class="temp-tit blind">2-1. 배너영역</h2>
           <!-- 배너박스 -->
           <div class="banner-box">
-            <!-- 배너 슬라이드 박스 : ul>li 구조-->
+            <!-- 배너 슬라이드 박스 : ul>li구조 -->
             <ul class="banner-slide">
-              <li><a href="#"><img src="./images/banner/ban01.jpg" alt="" /></a></li>
-              <li><a href="#"><img src="./images/banner/ban02.jpg" alt="" /></a></li>
-              <li><a href="#"><img src="./images/banner/ban03.jpg" alt="" /></a></li>
+              <li>
+                <a href="#"
+                  ><img src="./images/banner/ban01.jpg" alt="배너이미지1"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/banner/ban02.jpg" alt="배너이미지2"
+                /></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./images/banner/ban03.jpg" alt="배너이미지3"
+                /></a>
+              </li>
             </ul>
           </div>
         </section>

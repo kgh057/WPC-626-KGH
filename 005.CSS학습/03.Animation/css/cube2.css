@@ -25,7 +25,7 @@
   /* 큐브사이즈 지정 */
   --cube-size: 300px;
   /* 큐브 트랜지션 값 */
-  --cube-transition: 0.8s cubic-bezier(0.32, -0.99, 0.82, 2.21);
+  --cube-transition: .8s cubic-bezier(0.32, -0.99, 0.82, 2.21)
 }
 
 html,
@@ -52,15 +52,15 @@ body {
 
   /* 회전하는 큐브를 더 입체적으로 
   보이게 하기위해 원근설정하기 */
-  perspective: 50vh;
+  /* perspective: 50vh; */
 }
 
 /* 큐브 크기변경 버튼 */
-.btn-size {
-  font-size: 4vw;
-  padding: 1vw;
-  margin: 1vw;
-  border-radius: 1vw;
+.btn-size{
+    font-size: 4vw;
+    padding: 1vw;
+    margin: 1vw;
+    border-radius: 1vw;
 }
 
 /* 큐브박스 */
@@ -74,8 +74,8 @@ body {
   /* outline: 1px solid red; */
 
   /* 입체가 잘보이도록 살짝회전 x축 10도, y축 30도
-    transform: rotateX(x축각도) rotateY(y축각도) */
-  transform: rotateX(10deg) rotateY(30deg);
+    transform: rotateX(x축각도) rotateY(y축각도) */   
+    transform: rotateX(-45deg) rotateY(45deg);
 
   /******************************************* 
         [ 입체로 설정하기 ]
@@ -100,9 +100,9 @@ body {
   height: 100%;
 
   /* 반투명 */
-  opacity: 0.8;
+  /* opacity: 0.8; */
 
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   /* 보더박스는 패딩,보더 내부포함 */
   box-sizing: border-box;
 
@@ -110,22 +110,22 @@ body {
   transition: var(--cube-transition);
 }
 
-/* 첫번째 큐브 앞면 */
+/* 첫번째 큐브 앞면 : N글자 하단 */
 .cube span:nth-child(1) {
   /* 화면방향(z축)으로 이동하기 */
   transform: translateZ(calc(var(--cube-size) / 2));
 
   /* 배경이미지 */
-  background: url(../images/seoulCity.jpg) no-repeat center/cover;
+  background: url(../images/logo/tvn_logo_n2.png) no-repeat center/cover;
 }
-/* 두번째 큐브 오른쪽면 */
+/* 두번째 큐브 오른쪽면 : N글자 하단 */
 .cube span:nth-child(2) {
   /* Y축회전 +  화면방향(z축)으로 이동하기
     적용순서에 따라 결과가 달라진다! 회전부터해라!*/
-  transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
+  transform: rotateY(90deg) rotate(180deg) translateZ(calc(var(--cube-size) / 2));
 
   /* 배경이미지 */
-  background: url(../images/newyorkCity.jpg) no-repeat right/auto 105%;
+  background: url(../images/logo/tvn_logo_n2.png) no-repeat center/cover;
 }
 /* 세번째 큐브 뒷쪽면 */
 .cube span:nth-child(3) {
@@ -134,39 +134,44 @@ body {
   transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
 
   /* 배경이미지 */
-  background: url(../images/parisCity.jpg) no-repeat center/cover;
+  background: url(../images/logo/tvn_logo_tv.png) no-repeat center/cover;
+
+  /* 글자 반대로 뒤집기 */
+  rotate: 180deg;
 }
-/* 네번째 큐브 왼쪽면 */
+/* 네번째 큐브 왼쪽면 : tv글자 */
 .cube span:nth-child(4) {
   /* Y축회전 +  화면방향(z축)으로 이동하기
     적용순서에 따라 결과가 달라진다! 회전부터해라!*/
   transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
 
   /* 배경이미지 */
-  background: url(../images/cityMain.jpg) no-repeat center/cover;
+  background: url(../images/logo/tvn_logo_tv.png) no-repeat center/cover;
 }
-/* 다섯번째 큐브 위쪽면 */
+/* 다섯번째 큐브 위쪽면 : N글자 상단 */
 .cube span:nth-child(5) {
   /* X축회전 +  화면방향(z축)으로 이동하기
     적용순서에 따라 결과가 달라진다! 회전부터해라!*/
   transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
 
   /* 배경이미지 */
-  background: url(../images/citys.jpg) no-repeat center/cover;
+  background: url(../images/logo/tvn_logo_n1.png) no-repeat center/cover;
 }
-/* 여섯번째 큐브 아래쪽면 */
+/* 여섯번째 큐브 아래쪽면 : N글자 상단 */
 .cube span:nth-child(6) {
   /* X축회전 +  화면방향(z축)으로 이동하기
     적용순서에 따라 결과가 달라진다! 회전부터해라!*/
-  transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
+  /* rotate: 10deg; */
+  transform: rotateX(-90deg) rotate(-90deg) translateZ(calc(var(--cube-size) / 2));
 
   /* 배경이미지 */
-  background: url(../images/London_city.jpg) no-repeat center/cover;
+  background: url(
+  ../images/logo/tvn_logo_n1.png) no-repeat center/cover;
 }
 
 /* 애니적용 클래스 - animation:이시이지반방마 */
 .rotate-cube {
-  animation: cube-ani 3s infinite linear;
+  animation: cube-ani 2s linear;
 }
 /* 애니적용 클래스요소에 오버시 애니멈춤 */
 .rotate-cube:hover {
@@ -176,8 +181,11 @@ body {
 /* 큐브 회전 키프레임 */
 @keyframes cube-ani {
   to {
-    transform: rotateX(370deg) rotateY(-330deg);
+    transform: 
+    rotateX(calc(360deg - 45deg)) rotateY(calc(360deg + 45deg));
     /* x축은 양의방향, y축은 음의 방향으로 회전 */
+
+    /* transform: rotateX(-45deg) rotateY(45deg); */
   }
 }
 /* [ 같은위치까지 360도 회전하는 계산법 ]
