@@ -78,3 +78,16 @@ const 아이프레임 = document.querySelector(".screen iframe");
 
 링크.forEach((헐) => console.log(헐));
 // -> 링크를 돌면서 변수 헐...에 각 요소를 순서대로 전달함
+
+// 3. 오시는 길 클릭시 구글맵 보이기
+// 이벤트 대상 : .goMV
+// 변경 대상 : .gmap
+document.querySelector(".goMV").onclick = () => {
+  // 클래스 on 넣기
+  document.querySelector(".gmap").classList.add("on");
+}
+
+// 닫기 버튼 .cbtn을 클릭시 .gmap에 클래스 on 제거하기
+document.querySelector(".cbtn").onclick = () => {
+  document.querySelector(".gmap").classList.remove("on");
+}
