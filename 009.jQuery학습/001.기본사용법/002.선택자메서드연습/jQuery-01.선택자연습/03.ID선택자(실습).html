@@ -7,6 +7,11 @@
     <script src="../jquery-3.6.3.min.js"></script>
     <!-- 이징과 색상 애니메이션을 위해 제이쿼리 UI 넣기! -->
     <script src="../jquery-ui.min.js"></script>
+    <style>
+      body {
+        font-size: 4vw;
+      }
+    </style>
     <script>
       /******************************************************* 
     [ 제이쿼리 글자넣기 메서드 : text() ]
@@ -48,7 +53,38 @@
 
   *******************************************************/
 
-      ///// 제이쿼리 코드 블록 //////////
+      $(() => {
+        // 미션 : h2를 클릭하면 아이디 one, two, three를
+        // 배경색, 글자색, 글자크기(5vw이상), 보더를 각각 원하는 것으로 바꾸시오
+        // 각각 글자도 바꾸시오. text() 메서드 사용
+        $("h2").click(() => {
+          $("#sub").css({
+            backgroundColor: "lightblue",
+            color: "white",
+            fontSize: "5vw",
+            boderwidth: "5px",
+            transition: "all .5s",
+            }).text("하나");
+
+          $("#main").css({
+            backgroundColor: "lightyellow",
+            color: "gray",
+            fontSize: "5vw",
+            boderwidth: "8px",
+            transition: "all .5s 5s",
+            }).text("둘");
+
+          $("#total").css({
+            backgroundColor: "lightpink",
+            color: "white",
+            fontSize: "5vw",
+            boderwidth: "5px",
+            transition: "all .5s",
+            }).text("셋");
+
+        }); // click //////////
+      }); // 제이쿼리 코드 블록 //////////
+
     </script>
   </head>
 
