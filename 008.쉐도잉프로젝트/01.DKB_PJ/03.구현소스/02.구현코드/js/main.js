@@ -35,6 +35,12 @@ setClass();
     최신 동영상 파트에 스와이퍼 적용하기
 ************************************************/
 const videoSwiper = new Swiper(".clip-box", {
+  // 자동 플레이 설정
+  autoplay: {
+    delay: 3000, // 지연시간
+    disableOnInteraction: false, // 건드리면 멈췄다가 다시 재개함(false)
+  },
+
   // 화면크기별 스와이퍼 슬라이드 개수
   // Responsive breakpoints
   breakpoints: {
@@ -62,9 +68,13 @@ const videoSwiper = new Swiper(".clip-box", {
 });
 
 // 버튼 요소 선택 ///
-const btnPrev = document.querySelector(".ab1");
-const btnNext = document.querySelector(".ab2");
+// -> 선택시 주의: .ab1, .ab2는 배너에도 있음
+const btnPrev = document.querySelector("#video-part .ab1");
+const btnNext = document.querySelector("#video-part .ab2");
 // console.log(btnPrev, btnNext);
+
+// 이전버튼은 처음 로딩시 숨기기
+btnPrev.style.display = "none";
 
 // 다음버튼 클릭시 Swiper API를 이용한 코딩하기!!!
 btnNext.addEventListener("click", () => {
@@ -73,13 +83,14 @@ btnNext.addEventListener("click", () => {
 
 // 이전버튼 클릭시 Swiper API를 이용한 코딩하기!!!
 btnPrev.addEventListener("click", () => {
+  // console.log("다음버튼 클릭");
   videoSwiper.slidePrev();
 });
 
 // 스와이퍼 슬라이드가 변경될때 발생 이벤트는? slideChange
 videoSwiper.on("slideChange", () => {
-  console.log("맨처음인가?", videoSwiper.isBeginning);
-  console.log("맨끝인가?", videoSwiper.isEnd);
+  // console.log("맨처음인가?", videoSwiper.isBeginning);
+  // console.log("맨끝인가?", videoSwiper.isEnd);
 
   // 맨처음인가? 맨끝인가?에 따른 분기 //////
   // 1. 맨처음엔 => 이전버튼 비활성화
