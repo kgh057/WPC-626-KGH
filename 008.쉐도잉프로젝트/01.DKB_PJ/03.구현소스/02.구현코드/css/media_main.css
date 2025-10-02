@@ -33,10 +33,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 0;
     height: 100vh;
     background-color: #fff;
     padding-right: 0;
+
+    /* 처음에 메뉴박스 숨기기 */
+    overflow: hidden;
   }
 
   /* 메뉴그룹 변경 */
