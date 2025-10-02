@@ -245,7 +245,7 @@ h1.logo::before {
   padding: 5vw;
   /* li에서 25px떨어져서 하단 보더가 보이게함 */
   margin-top: 25px;
-  /* 배경색은 여기에~!!! */
+  /* 배경색은 여기에 */
   background-color: white;
 }
 
