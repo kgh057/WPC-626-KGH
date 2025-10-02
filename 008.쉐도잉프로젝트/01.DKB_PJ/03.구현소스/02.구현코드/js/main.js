@@ -109,3 +109,16 @@ videoSwiper.on("slideChange", () => {
     btnPrev.style.display = "block";
   } /// else ////
 }); ///// slideChange //////
+
+/************************************************ 
+    햄버거 버튼 클릭시 상단영역에 클래스 넣기
+************************************************/
+// (1) 이벤트 대상 : .btn-ham
+const $btnHam = $(".btn-ham");
+// (2) 변경 대상 : #top-area 
+const $topArea = $("#top-area");
+
+// (3) 이벤트 대상 클릭시 변경 대상에 클래스 토글로 on 넣기
+$btnHam.on("click", () => {
+  $topArea.toggleClass("on");
+}); // click //////////
