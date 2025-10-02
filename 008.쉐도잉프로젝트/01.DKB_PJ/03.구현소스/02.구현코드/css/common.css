@@ -292,6 +292,42 @@ h1.logo::before {
   height: 13.8rem;
 }
 
+/* 모바일용 버튼그룹 박스 */
+.btn-group {
+  position: absolute;
+  top: 50%;
+  /* 세로 중앙 */
+  translate: 0 -50%;
+  right: 3vw;
+  /* 플렉스 */
+  /* display: flex; */
+  display: none;
+  gap: 20px;
+}
+
+/* 버튼 디자인 */
+.btn-group button {
+  background-color: transparent;
+  border: none;
+  /* 아이콘 설정 (글자와 같음) */
+  font-size: 3rem;
+  cursor: pointer;
+  color: #222;
+}
+
+/* 햄버거 버튼 셋팅 : 처음에 두번째 i태그인 X버튼이 안보임 */
+.btn-ham i:nth-child(2) {
+  display: none;
+}
+
+/* 상단영역 최상위 부모인 #top-area에 클래스 on을 주면 X버튼 보이기 / 햄버거 숨기기 */
+#top-area.on .btn-ham i:nth-child(2) {
+  display: block;
+}
+#top-area.on .btn-ham i:nth-child(1) {
+  display: none;
+}
+
 /***************** 1.5. 드라마파트메뉴 *****************/
 /***************** 2. 메인영역 *****************/
 /***************** 2-1. 배너영역 *****************/
