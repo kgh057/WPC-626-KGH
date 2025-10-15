@@ -83,6 +83,21 @@ function slideAuto() {
   }, IV_TIME);
 } ////// slideAuto 함수 //////
 
+// 이동버튼 클릭시 지우기함수 호출하기 ////
+$(".abtn").click(clearAuto);
+
+// [4] 지우기 함수 /////////////////
+function clearAuto() {
+  // 1. 인터발 지우기
+  clearInterval(autoI);
+
+  // 2. 타임아웃 지우기 : 실행쓰나미 방지!!!
+  clearTimeout(autoT);
+
+  // 3. 타임아웃 셋팅하기(일정시간후 다시 자동호출)
+  autoT = setTimeout(slideAuto, TO_TIME);
+} ////// clearAuto 함수 //////
+
 // // ****************************** /////
 // // 자바스크립로 버튼 이동구현하기 ///////
 // // ****************************** /////
