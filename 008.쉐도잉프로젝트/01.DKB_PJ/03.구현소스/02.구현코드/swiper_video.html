@@ -37,7 +37,8 @@
         translate: 0 -50%;
         width: 80vw;
         /* aspect-ratio: 5/1;
-        -> 여기서 비율주지말고 개별박스인 .swiper-slide에 비율주기*/
+        -> 여기서 비율주지말고 개별박스인 
+        .swiper-slide에 주자! */
         margin: 0 auto;
 
         /* 선택금지 */
@@ -53,7 +54,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* 개별박스에 비율주기 */
+        /* 개별박스에 비율주기! */
         aspect-ratio: 5/4;
       }
 
@@ -93,12 +94,12 @@
   </head>
 
   <body>
-    <!-- Swiper
-     스와이퍼는 3중 박스 구조를 가진다
-     .swiper (부모박스 이름은 자유)
-      ㄴ .swiper-wrapper (클래스명 고정)
-        ㄴ .swiper-slide (클래스명 고정) -->
-        
+    <!-- Swiper 
+      스와이퍼는 3중 박스 구조를 가진다!
+      .swiper(부모박스 이름은 자유!)
+        ㄴ.swiper-wrapper(클래스명고정!)
+          ㄴ.swiper-slide(클래스명고정!)
+    -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <!-- 16개의 이미지를 포함한 박스로 구성함 -->
@@ -164,7 +165,7 @@
 
     <!-- Initialize Swiper -->
     <script>
-      // 버튼 요소 선택
+      // 버튼 요소 선택 ///
       const btnPrev = document.querySelector(".btn-prev");
       const btnNext = document.querySelector(".btn-next");
 
@@ -190,20 +191,20 @@
           // when window width is >= 480px
           480: {
             slidesPerView: 2,
-            spaceBetween: '5vw',
+            spaceBetween: "5vw",
           },
           // when window width is >= 640px
           640: {
             slidesPerView: 3,
-            spaceBetween: '10vw',
+            spaceBetween: "10vw",
           },
           // when window width is >= 1000px
           1000: {
             slidesPerView: 4,
-            spaceBetween: '20vw',
+            spaceBetween: "20vw",
           },
-        }, // breakpoints ////////////
-      }); // swiper ////////////
+        }, ///// breakpoints //////
+      }); ///// swiper //////
 
       // 다음버튼 클릭시 Swiper API를 이용한 코딩하기!!!
       document.querySelector(".btn-next").addEventListener("click", () => {
@@ -221,7 +222,7 @@
       //   console.log("끝이양~!!!");
       //   // 왼쪽버튼 비활성화 처리하기!
       //   document.querySelector(".btn-next").style.display = "none";
-      // }); // reachEnd ////////////
+      // }); ///// reachEnd //////
 
       // 스와이퍼 슬라이드 처음 도달시 발생 이벤트: reachBeginning
       // 이때 이전 버튼을 비활성화 처리한다!
@@ -229,40 +230,40 @@
       //   console.log("처음이양~!!!");
       //   // 왼쪽버튼 비활성화 처리하기!
       //   document.querySelector(".btn-prev").style.display = "none";
-      // }); // reachEnd ////////////
+      // }); ///// reachEnd //////
 
       // 스와이퍼 슬라이드가 변경될때 발생 이벤트는? slideChange
       swiper.on("slideChange", () => {
         console.log("맨처음인가?", swiper.isBeginning);
         console.log("맨끝인가?", swiper.isEnd);
 
-        // 맨처음인가? 맨끝인가?에 따른 분기
+        // 맨처음인가? 맨끝인가?에 따른 분기 //////
         // 1. 맨처음엔 => 이전버튼 비활성화
         if (swiper.isBeginning) {
           btnPrev.style.display = "none";
-        } // if ////////////
+        } /// if ////
 
         // 2. 맨끝인가? => 다음버튼 비활성화
         else if (swiper.isEnd) {
           btnNext.style.display = "none";
-        } // else if ////////////
+        } /// else if ////
 
         // 3. 그밖의 경우는 => 이전버튼, 다음버튼 활성화
         else {
           btnNext.style.display = "inline-block";
           btnPrev.style.display = "inline-block";
-        } // else ////////////
-      }); // slideChange ////////////
+        } /// else ////
+      }); ///// slideChange //////
 
       /* 
-        [ 스와이퍼 화면 크기별 슬라이드 개수 조정 예시 소스 ]
+        [스와이퍼 화면 크기별 슬라이드 개수 조정 예시 소스]
         const swiper = new Swiper('.swiper', {
-        // Default parameters
-        slidesPerView: 1,
-        spaceBetween: 10,
+      // Default parameters
+      slidesPerView: 1,
+      spaceBetween: 10,
 
-        // Responsive breakpoints
-        breakpoints: {
+      // Responsive breakpoints
+      breakpoints: {
         // when window width is >= 320px
         320: {
           slidesPerView: 2,
@@ -280,6 +281,8 @@
         }
       }
     })
+      
+      
       */
     </script>
   </body>

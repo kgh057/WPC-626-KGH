@@ -15,6 +15,7 @@
 
 /***************** 메인 CSS *****************/
 
+
 /***************** 2-2. 캐릭터영역 *****************/
 .cat-part {
   position: relative;
@@ -337,7 +338,8 @@
 }
 /* 스와이퍼 적용 랩퍼박스 */
 .clip-box ul {
-  /* -> 스와이퍼에서 처리하므로 flex설정 불필요!
+  /*-> 스와이퍼에서 처리하므로
+  flex설정 불필요!
   트랜지션주면 방해됨! 불필요!!!
 
   position: relative;
@@ -352,11 +354,11 @@
 
 /* 스와이퍼 리스트 .swiper-slide */
 .clip-box li {
-  /* -> 플렉스 설정 불필요
+  /*->플렉스 설정 불필요!!! 
   flex-basis: 25%;
   flex-shrink: 0; */
   /* 플렉스 gap 속성대신 패딩으로 처리!
-    이유는? 드래그시 영역아웃현상 때문! */
+    이유는? 드래그시 영역아웃현상때문! */
   /* padding: 0 1.1%;
   box-sizing: border-box; */
 }
@@ -451,3 +453,4 @@
 .btn-box.right button:first-child {
   display: none;
 }
+
