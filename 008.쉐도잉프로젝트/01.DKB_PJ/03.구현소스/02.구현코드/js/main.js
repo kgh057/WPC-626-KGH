@@ -1,7 +1,93 @@
 // 도깨비 PJ 메인 페이지 JS - main.js /////////
 
+// 도깨비 데이터 불러오기 ///////
+import { previewData, catData } from "../data/dkb_data.js";
+console.log(catData);
+
 /************************************************ 
-    2. 최신 동영상 파트에 스와이퍼 적용하기
+    1. 미리보기 데이터 바인딩 하기
+************************************************/
+// 데이터를 요소에 넣어서 화면에 출력하는 것을 데이터 바인딩 이라고 한다!
+// (1) 바인딩 대상 : .preview-box ul.cont-box
+const previewArea = document.querySelector(".preview-area ul.cont-box");
+console.log(previewArea);
+
+// (2) 바인딩 데이터 : previewData
+
+/* (3) 반복 구조
+<li>
+  <h3>제목</h3>
+  <p>내용</p>
+</li>
+*/
+
+// (4) 데이터 바인딩하기 : map().join('') 사용
+// 배열.map((배열값,순번)=>리턴값) -> 새로운 배열 생성
+// -> 새로운 배열값 만들기는 맵조잉 (map().join(''))
+previewArea.innerHTML = 
+previewData.map(v=>`
+<li>
+  <h3>${v.title}</h3>
+  <p>${v.story}</p>
+</li>
+  `).join('');
+
+/************************************************ 
+    2. 캐릭터 소개 영역 데이터 바인딩하기
+************************************************/
+// 바인딩 대상 : .cat-box
+const catBox = 
+document.querySelector(".cat-box");
+console.log(catBox);
+
+// 데이터 바인딩 태그구조
+/* 
+<!-- 공유박스 -->
+<div>
+  <!-- 이미지박스 -->
+  <figure>
+    <img src="./images/dc1.png" alt="공유" />
+    <figcaption>
+      <img src="./images/d01.png" alt="도깨비진한글자" />
+      <img src="./images/d011.png" alt="도깨비흐린글자" />
+    </figcaption>
+  </figure>
+  <!-- 글박스 -->
+  <aside class="scbar">
+    <!-- 타이틀 -->
+    <h3>도깨비(김신), 939세</h3>
+    <!-- 내용 -->
+    <p></p>
+  </aside>
+</div>  
+*/
+
+// 데이터 바인딩하기 -> 맵죠잉~~!
+catBox.innerHTML = 
+catData.map(v=>`
+  <!-- ${v.actorName}박스 -->
+<div>
+  <!-- 이미지박스 -->
+  <figure>
+    <img src="./images/dc${v.idx}.png" alt="${v.actorName}" />
+    <figcaption>
+      <img src="./images/d0${v.idx}.png" alt="${v.actorName}진한글자" />
+      <img src="./images/d0${v.idx+v.idx}.png" alt="도깨비흐린글자" />
+    </figcaption>
+  </figure>
+  <!-- 글박스 -->
+  <aside class="scbar">
+    <!-- 타이틀 -->
+    <h3>${v.catTitle}</h3>
+    <!-- 내용 -->
+    <p>${v.catContent}</p>
+  </aside>
+</div>  
+  `).join('');
+
+
+/************************************************ 
+    3. 최신 동영상 파트에 스와이퍼 적용하기
 ************************************************/
 const videoSwiper = new Swiper(".clip-box", {
   // 자동플레이설정
