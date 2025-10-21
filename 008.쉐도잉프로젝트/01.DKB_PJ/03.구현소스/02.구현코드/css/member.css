@@ -22,7 +22,6 @@
 }
 
 /* [2] 회원가입 페이지 디자인 */
-
 /* 2-1.타이틀 */
 .stit {
   font-size: 5rem;
@@ -30,7 +29,6 @@
   text-align: center;
   padding: 40px 0 20px;
 }
-
 /* 2-2.컨텐츠박스 */
 .scont {
   position: relative;

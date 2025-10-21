@@ -130,7 +130,7 @@
     width: auto;
   }
 
-  /* 타이틀바 소속 버튼  - 모바일에서 보임*/
+  /* 타이틀바 소속 버튼 - 모바일에서 보임 */
   .title-bar button {
     display: block;
   }
