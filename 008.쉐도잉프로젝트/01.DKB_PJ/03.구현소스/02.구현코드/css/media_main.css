@@ -28,7 +28,7 @@
   }
 
   /* 바디의 패딩설정값 변경 */
-  .body {
+  body{
     padding-top: 60px !important;
   }
 
