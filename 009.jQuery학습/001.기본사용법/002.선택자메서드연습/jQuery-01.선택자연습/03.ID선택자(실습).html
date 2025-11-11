@@ -51,40 +51,40 @@
     ->>> animate(), fadeIn(), slideDown() 등 앞에서 작동!
 
 
-  *******************************************************/
+    *******************************************************/
 
-      $(() => {
-        // 미션 : h2를 클릭하면 아이디 one, two, three를
-        // 배경색, 글자색, 글자크기(5vw이상), 보더를 각각 원하는 것으로 바꾸시오
-        // 각각 글자도 바꾸시오. text() 메서드 사용
-        $("h2").click(() => {
-          $("#sub").css({
-            backgroundColor: "lightblue",
-            color: "white",
-            fontSize: "5vw",
-            boderwidth: "5px",
-            transition: "all .5s",
-            }).text("하나");
+$(()=>{
+  // 미션: h2를 클릭하면 아이디 one, two, three를 
+  // 배경색, 글자색, 글자크기(5vw이상), 보더, 트랜지션을 각각 원하는것으로 바꾸시오!
+  // 각각 글자도 바꾸시오.text() 메서드 사용
+  
+  $('h2').click(()=>{
+    $('#sub').css({
+      backgroundColor: 'lightgreen',
+      color: 'darkgreen',
+      fontSize: '5vw',
+      borderWidth: '10px',
+      transition: 'all .4s'
+    }).text('어쩔수가없다');
 
-          $("#main").css({
-            backgroundColor: "lightyellow",
-            color: "gray",
-            fontSize: "5vw",
-            boderwidth: "8px",
-            transition: "all .5s 5s",
-            }).text("둘");
+    $('#main').css({
+      backgroundColor: 'lightcoral',
+      color: 'darkred',
+      fontSize: '6vw',
+      borderWidth: '20px',
+      transition: 'all .4s .4s'
+    }).text('이병헌');
 
-          $("#total").css({
-            backgroundColor: "lightpink",
-            color: "white",
-            fontSize: "5vw",
-            boderwidth: "5px",
-            transition: "all .5s",
-            }).text("셋");
-
-        }); // click //////////
-      }); // 제이쿼리 코드 블록 //////////
-
+    $('#total').css({
+      backgroundColor: 'lightblue',
+      color: 'darkblue',
+      fontSize: '7vw',
+      borderWidth: '30px',
+      transition: 'all .4s .8s'
+    }).text('대박나라!');
+    
+  }); /// click ////
+}); /////// 제이쿼리 코드 블록 //////////
     </script>
   </head>
 

@@ -15,7 +15,6 @@ console.log("대상:",btns,scene);
 
 // 2. 이벤트 걸기 ////////
 btns.forEach(el=>el.onclick=changeImage);
-// 선언적 함수는 위에서 먼저 부를 수 있음
 
 // btns[0].onclick = changeImage;
 // btns[1].onclick = changeImage;

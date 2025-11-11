@@ -21,33 +21,39 @@ const myText =
 const newText = myText.split(" ");
 console.log("잘라서배열:", newText);
 
-// forEach() 메서드를 사용하는 방법
-// 배열값 만큼 반복시킨다
-// 이때 변수에 span태그로 싼 값을 담는다
+// forEach() 메서드를 사용하는 방법 //////
+// 배열값 만큼 반복시킨다!
+// 이때 변수에 span태그로 싼 값을 담는다!
 // let hCode = "";
 // newText.forEach(val=>{
-//     hCode += `<span>${val}</span>`
+//     hCode += `<span>${val}</span>`;
 // });
 // // 대상박스에 코드넣기
 // stage.innerHTML = hCode;
 
-// 위와 같이 forEach를 사용할 때는 변수도 써야하고
-// 따로 html 넣기도 해야하는 번거로움이 있다
+// 위와 같이 forEach를 사용할때는 변수도 써야하고
+// 따로 html넣기도 해야하는 번거로움이 있다!
 // 이런 이유로 새로운 메서드가 생겼으니 바로 -> map()
 // map((값,순번,객체)=>{return 새로운값})
-// -> 만약 return 키워드를 생략하려면?
+// -> 만약 return 키워드를 생력하려면?
 // map((값,순번,객체)=>새로운값)
 
 // 5. 글자데이터 변환하기
 // - span태그로 싸서 대상박스에 넣기
 // 대상: stage
 stage.innerHTML = newText
-  .map((v, i) => `<span style="transition-delay: ${i * 0.1}s">${v}</span>`)
+  .map(
+    (v, i) =>
+      `<span
+            style="transition-delay: ${i * 0.1}s"
+        >${v}</span>`
+  )
   .join("");
-// map의 결과는 배열이기 때문에 그 값을 문자화하여 콤마를 없애면 된다
-// 이때 쓰는 배열 메서는든?
-// 배열.join('') -> 구분자를 빈 것으로 하면 깨끗한 태그만 남는다
-// 객체는 맵쪼잉
+// map의 결과는 배열이기때문에 그 값을 문자화하여
+// 콤마를 없애면 된다! 이때 쓰는 배열 메서드는?
+// 배열.join('') -> 구분자를 빈것으로 하면 깨끗한
+// 태그만 남는다!!!
+// 객체는 맵쪼잉!
 // 배열객체.map().join('')
 
 // 사용할 수 있는 방법은?

@@ -4,8 +4,8 @@
 import myFn from "./my_function.js";
 
 // 1. 사용할 이벤트 : wheel
-// -> scroll 이벤트는 스크롤 바가 움직일 때 발생
-// -> wheel 이벤트는 마우스 휠이 움직일 때 발생
+// -> scroll 이벤트는 스크롤바기 움직일때 발생
+// -> wheel 이벤트는 마우스 휠이 움직일때 발생
 
 // 2. 이벤트 대상 : window
 
@@ -31,9 +31,9 @@ let winH = window.innerHeight;
 const page = document.querySelectorAll(".page");
 const pageCnt = page.length;
 
-console.log("페이지개수", pageCnt);
+console.log("페이지개수:", pageCnt);
 
-// 9. 메뉴 및 인디케이터 요소 li 수집
+// 9. 메뉴 및 인디케이터 요소 li수집
 const gnb = document.querySelectorAll(".gnb li");
 const indic = document.querySelectorAll(".indic li");
 
@@ -61,14 +61,14 @@ window.addEventListener(
       //  아랫방향 음수
       pgNo++; // 페이지번호 증가
       if (pgNo >= pageCnt) pgNo = pageCnt - 1; // 한계값 고정
-    } // if ////
+    } /// if ///
     else if (dir > 0) {
       // 윗방향 양수
       pgNo--; // 페이지번호 감소
       if (pgNo < 0) pgNo = 0; // 한계값 고정
-    } // else if ////
+    } /// else if ///
 
-    console.log("휠", dir, pgNo);
+    console.log("휠~~~~!", pgNo);
 
     // (4) 전체 포지션이동
     window.scrollTo(0, pgNo * winH);

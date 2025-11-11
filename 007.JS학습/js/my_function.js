@@ -6,7 +6,8 @@ const myFn = {
   qsa: (x) => document.querySelectorAll(x),
   qsaEl: (el, x) => el.querySelectorAll(x),
   // 이벤트 셋팅함수
-  addEvt: (el, evt, fn) => el.addEventListener(evt, fn),
+  addEvt: (el, evt, fn) => 
+    el.addEventListener(evt, fn),
 }; ///// myFn 객체 ///////
 
 // import해서 사용할 파일이므로 객체를 내보내야함!

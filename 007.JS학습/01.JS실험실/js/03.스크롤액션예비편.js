@@ -17,56 +17,60 @@ const getBCR = (el) => el.getBoundingClientRect().top.toFixed(1);
 
 // 화면높이값의 3/1지점값 구하기
 // 즉, 윈도우 높이 2/3크기임!
-const winH = (window.innerHeight * 2) / 3;
-console.log("윈도우 2/3 높이:", winH);
+const winH = window.innerHeight * 2/3;
+console.log('윈도우 2/3 높이:', winH);
+
 
 // [ 위치값 화면에 찍기 구현코드 ] ////
 // 대상 : .track aside
-const bangi = document.querySelectorAll(".track aside");
-console.log("뱅기:", bangi);
+const bangi = document.querySelectorAll('.track aside');
+console.log('뱅기:',bangi);
 
 // 비행기 위치값 출력 span ////
-let b1Span = bangi[0].querySelector("span");
-let b2Span = bangi[1].querySelector("span");
-let b3Span = bangi[2].querySelector("span");
+let b1Span =bangi[0].querySelector('span');
+let b2Span =bangi[1].querySelector('span');
+let b3Span =bangi[2].querySelector('span');
+
 
 // [ 스크롤 이벤트 구현코드 ]
 // 이벤트 대상: window
 // 이벤트 종류: scroll 이벤트
-window.addEventListener("scroll", () => {
-  console.log("스크롤중~~~!", getBCR(bangi[0]));
+window.addEventListener('scroll',()=>{
 
-  // 각 비행기 위치변수
-  let b1Top = getBCR(bangi[0]);
-  let b2Top = getBCR(bangi[1]);
-  let b3Top = getBCR(bangi[2]);
+    console.log('스크롤중~~~!', getBCR(bangi[0]));
 
-  // 첫번째 비행기 위치값 출력하기
-  b1Span.innerText = b1Top;
-  // 두번째 비행기 위치값 출력하기
-  b2Span.innerText = b2Top;
-  // 세번째 비행기 위치값 출력하기
-  b3Span.innerText = b3Top;
+    // 각 비행기 위치변수
+    let b1Top = getBCR(bangi[0]);
+    let b2Top = getBCR(bangi[1]);
+    let b3Top = getBCR(bangi[2]);
 
-  // 해당위치에 비행기박스 올때 클래스 action주기!
-  // 첫번째 비행기박스의 top값 < 윈도우이높이 2/3
-  if (b1Top < winH) {
-    bangi[0].classList.add("action");
-  } else {
-    bangi[0].classList.remove("action");
-  }
+    // 첫번째 비행기 위치값 출력하기
+    b1Span.innerText = b1Top;
+    // 두번째 비행기 위치값 출력하기    
+    b2Span.innerText = b2Top;
+    // 세번째 비행기 위치값 출력하기    
+    b3Span.innerText = b3Top;
 
-  //   두번째 비행기박스의 top값 < 윈도우 높이 2/3
-  if (b2Top < winH) {
-    bangi[1].classList.add("action");
-  } else {
-    bangi[1].classList.remove("action");
-  }
+    // 해당위치에 비행기박스 올때 클래스 action주기!
+    // 첫번째 비행기박스의 top값 < 윈도우 높이 2/3
+    if(b1Top < winH){
+        bangi[0].classList.add('action');
+    }else{
+        bangi[0].classList.remove('action');
+    }
 
-  //   세번째 비행기박스의 top값 < 윈도우 높이 2/3
-  if (b3Top < winH) {
-    bangi[2].classList.add("action");
-  } else {
-    bangi[2].classList.remove("action");
-  }
-}); //////////// scroll 이벤트 ////////////
+    // 두번째 비행기박스의 top값 < 윈도우 높이 2/3
+    if(b2Top < winH){
+        bangi[1].classList.add('action');
+    }else{
+        bangi[1].classList.remove('action');
+    }
+
+    // 세번째 비행기박스의 top값 < 윈도우 높이 2/3
+    if(b3Top < winH){
+        bangi[2].classList.add('action');
+    }else{
+        bangi[2].classList.remove('action');
+    }
+
+}); //////////// scroll 이벤트 //////////// 

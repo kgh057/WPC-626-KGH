@@ -64,8 +64,9 @@ function SmoothScroll(scrollTarget, speed, smooth) {
   function normalizeWheelDelta(e) {
     if (e.detail) {
       if (e.wheelDelta)
-        return (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1);
-      // Opera
+        return (
+          (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1)
+        ); // Opera
       else return -e.detail / 3; // Firefox
     } else return e.wheelDelta / 120; // IE,Safari,Chrome
   }

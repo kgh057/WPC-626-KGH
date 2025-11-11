@@ -1,9 +1,11 @@
 // JS3-4.for문연습2 //////
 
 // 로딩구역 //////////
-// DOMContentLoaded 이벤트는 html태그만 모두 로딩되면 발생하는 이벤트다
-// load이벤트보다 속도가 빠르다 -> load이벤트는 이미지가 다 들어올 때까지 기다림
-// 외부 JS 호출시 defer를 사용하지 않으면 아래와 같이 이벤트 셋팅해야한다
+// DOMContentLoaded 이벤트는 html태그만 모두 로딩되면
+// 발생하는 이벤트다! load 이벤트보다 속도가 빠르다!
+// 외부 JS호출시 defer를 사용하지 않으면 아래와 같이
+// 이벤트 셋팅해야한다!
+
 window.addEventListener("DOMContentLoaded",()=>{
     console.log("로딩완료!");
 

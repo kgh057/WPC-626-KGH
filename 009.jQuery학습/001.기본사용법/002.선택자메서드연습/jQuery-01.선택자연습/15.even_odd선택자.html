@@ -28,13 +28,15 @@
         // (초기높이값을 40px로 설정)
         $("#container").click(() => {
           // $("li:even")
-          $("li:nth-child(even)").css({
+          $("li:nth-child(even)")
+          .css({
             backgroundImage: "url(./sample1.jpg)",
             height: "200px",
             transition: ".8s",
           }); ///////// css ////////
           // $("li:odd")
-          $("li:nth-child(odd)").css({
+          $("li:nth-child(odd)")
+          .css({
             backgroundImage: "url(./sample2.jpg)",
             height: "200px",
             transition: ".8s 1s", // 지연시간 1초줌!

@@ -110,21 +110,21 @@ chohyun.trailer = function () {
 
 // 김근해의 오브젝트!
 // 변경 가능하도록 let으로 선언
-let 김근해꼬야 = {};
+let 김근해 = {};
 // 오브젝트 형만 리터럴로 만들고 객체내용은 아래에서 생성
 
 // 1. 영화제목
-김근해꼬야.title = "코렐라인";
+김근해.title = "코렐라인";
 // 2. 감독
-김근해꼬야.director = "헨리 셀릭";
+김근해.director = "헨리 셀릭";
 // 3. 배우
-김근해꼬야.actor = "다코타 패닝, 테리 해처";
+김근해.actor = "다코타 패닝, 테리 해처";
 // 4. 장르
-김근해꼬야.genre = "애니메이션";
+김근해.genre = "애니메이션";
 // 5. 관람가
-김근해꼬야.ratings = "12세 이상";
+김근해.ratings = "12세 이상";
 // 6. 예고편
-김근해꼬야.trailer = function () {
+김근해.trailer = function () {
   console.log("예고편:영화아이디");
   // 예고편 플레이 함수호출!
   playMovie("OYANsqfmA5A");

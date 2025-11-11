@@ -17,28 +17,26 @@
           .photo {
             text-align: center;
             /* 인라인요소 가로중앙정렬 */
-            background-color: #caf0ff;
+            background-color: skyblue;
             padding: 20px;
             margin-bottom: 50px;
             height: 50vh;
             overflow: hidden;
           }
-
-          /* 클래스 off를 이미지에 주면 왼쪽으로 사라짐 */
+          /* 클래스 off를 이미지에 주면 왼쪽으로 사라짐! */
           .photo img.off {
             left: -100%;
             opacity: 0;
           }
-
-          /* 기본이미지 셋팅 : 트랜지션 적용 */
+          /* 기본 이미지 셋팅 : 트랜지션 적용!
+          클래스 off를 줬다가, on을 주고 지우면 등장! */
           .photo img {
             position: relative;
             left: 0;
             opacity: 1;
             transition: .5s ease-out;
           }
-
-          /* 오른쪽 바깥쪽으로 이미지를 이동함 */
+          /* 오른쪽 바깥쪽으로 이미지를 이동함! */
           .photo img.on {
             left: 100%;
             opacity: 0;
